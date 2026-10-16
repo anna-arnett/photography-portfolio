@@ -1,0 +1,479 @@
+.work {
+    --cream: #eee5d5;
+    --cream-light: #f6efe4;
+  
+    --ink: #302b24;
+  
+    --olive: #3d4232;
+    --dusty-blue: #9caeb8;
+    --soft-gold: #c5a676;
+    --soft-cream: #ded2bc;
+  
+    width: 100%;
+  
+    padding: 2rem 0 5rem;
+  
+    background: var(--cream);
+    color: var(--ink);
+  }
+  
+  
+  /* =========================================================
+     INTRO
+     ========================================================= */
+  
+  .intro {
+    width: min(calc(100% - 2rem), 1320px);
+  
+    margin: 0 auto;
+    padding: 2.5rem 0 3.5rem;
+  }
+  
+  .topRule {
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 0.55rem 0;
+  
+    border-top: 1px solid rgba(48, 43, 36, 0.3);
+    border-bottom: 1px solid rgba(48, 43, 36, 0.3);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .introContent {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+  
+    gap: 5rem;
+  
+    align-items: end;
+  
+    padding-top: 2.75rem;
+  }
+  
+  .kicker {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  
+    color: rgba(48, 43, 36, 0.56);
+  }
+  
+  .introTitle h1 {
+    max-width: 12ch;
+  
+    margin-top: 0.4rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(3rem, 5vw, 5.4rem);
+    font-weight: 400;
+  
+    line-height: 0.91;
+    letter-spacing: -0.045em;
+  }
+  
+  .introTitle h1 em {
+    font-weight: 400;
+  }
+  
+  .introSide {
+    padding-bottom: 0.3rem;
+  }
+  
+  .introSide > p:first-child {
+    max-width: 34ch;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.65;
+  
+    color: rgba(48, 43, 36, 0.7);
+  }
+  
+  .services {
+    max-width: 38ch;
+  
+    margin-top: 1rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: 0.86rem;
+    font-style: italic;
+    line-height: 1.5;
+  
+    color: #65654e;
+  }
+  
+  
+  /* =========================================================
+     CATEGORY CARDS
+     ========================================================= */
+  
+  .categories {
+    width: min(calc(100% - 2rem), 1320px);
+  
+    margin: 0 auto 4.25rem;
+  
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  
+    gap: 0.65rem;
+  }
+  
+  .categoryCard {
+    position: relative;
+  
+    min-height: 12rem;
+  
+    padding: 1.15rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    overflow: hidden;
+  
+    border: 1px solid rgba(48, 43, 36, 0.13);
+  
+    transition:
+      transform 220ms ease,
+      filter 220ms ease;
+  }
+  
+  .categoryCard:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.025);
+  }
+  
+  .categoryCard::after {
+    content: "";
+  
+    position: absolute;
+  
+    width: 9rem;
+    height: 9rem;
+  
+    right: -4.5rem;
+    bottom: -5rem;
+  
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  
+    opacity: 0.08;
+  }
+  
+  .categoryNumber {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.14em;
+  
+    opacity: 0.62;
+  }
+  
+  .categoryCard p {
+    margin-bottom: 0.3rem;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.43rem;
+  
+    letter-spacing: 0.16em;
+  }
+  
+  .categoryCard h2 {
+    font-family: var(--font-serif), serif;
+    font-size: clamp(1.5rem, 2.3vw, 2.35rem);
+    font-weight: 400;
+  
+    line-height: 0.94;
+  }
+  
+  .categoryLink {
+    align-self: flex-start;
+  
+    padding-bottom: 0.1rem;
+  
+    border-bottom: 1px solid currentColor;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.13em;
+  }
+  
+  .olive {
+    background: var(--olive);
+    color: var(--cream-light);
+  }
+  
+  .blue {
+    background: var(--dusty-blue);
+    color: #f8f3eb;
+  }
+  
+  .creamCard {
+    background: var(--soft-cream);
+    color: var(--ink);
+  }
+  
+  .gold {
+    background: var(--soft-gold);
+    color: #3d362b;
+  }
+  
+  
+  /* =========================================================
+     ARCHIVE
+     ========================================================= */
+  
+  .archive {
+    width: min(calc(100% - 2rem), 1450px);
+  
+    margin: 0 auto;
+  }
+  
+  .archiveHeader {
+    margin-bottom: 0.65rem;
+  
+    padding: 0.6rem 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    border-top: 1px solid rgba(48, 43, 36, 0.3);
+    border-bottom: 1px solid rgba(48, 43, 36, 0.3);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+  }
+  
+  .archiveHeader > div {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .archiveCount {
+    color: rgba(48, 43, 36, 0.45);
+  }
+  
+  .archiveHeader p {
+    font-family: var(--font-serif), serif;
+    font-size: 0.72rem;
+    font-style: italic;
+    letter-spacing: 0;
+  
+    color: rgba(48, 43, 36, 0.52);
+  }
+  
+  
+  /* Strict grid */
+  
+  .photoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  
+    gap: 0.55rem;
+  }
+  
+  .photo {
+    position: relative;
+  
+    display: block;
+  
+    aspect-ratio: 4 / 5;
+  
+    overflow: hidden;
+  
+    background: #d8d0c2;
+  }
+  
+  .photo img {
+    object-fit: cover;
+  
+    transition:
+      transform 600ms ease,
+      filter 600ms ease;
+  }
+  
+  .photo:hover img {
+    transform: scale(1.025);
+    filter: brightness(0.97);
+  }
+  
+  .photo::after {
+    content: "";
+  
+    position: absolute;
+    inset: 0;
+  
+    background: rgba(31, 26, 21, 0);
+  
+    transition: background 300ms ease;
+  }
+  
+  .photo:hover::after {
+    background: rgba(31, 26, 21, 0.05);
+  }
+  
+  .photoNumber {
+    position: absolute;
+    z-index: 2;
+  
+    left: 0.65rem;
+    bottom: 0.55rem;
+  
+    opacity: 0;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.13em;
+  
+    color: rgba(255, 255, 255, 0.9);
+  
+    transition: opacity 250ms ease;
+  }
+  
+  .photo:hover .photoNumber {
+    opacity: 1;
+  }
+  
+  
+  /* =========================================================
+     CLOSING CTA
+     ========================================================= */
+  
+  .closing {
+    width: min(calc(100% - 2rem), 800px);
+  
+    margin: 5rem auto 0;
+    padding: 3.5rem 0 1rem;
+  
+    border-top: 1px solid rgba(48, 43, 36, 0.3);
+  
+    text-align: center;
+  }
+  
+  .closing h2 {
+    margin-top: 0.55rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 400;
+  
+    line-height: 0.92;
+  }
+  
+  .inquireLink {
+    display: inline-block;
+  
+    margin-top: 1.4rem;
+    padding-bottom: 0.12rem;
+  
+    border-bottom: 1px solid currentColor;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  
+    transition: opacity 200ms ease;
+  }
+  
+  .inquireLink:hover {
+    opacity: 0.5;
+  }
+  
+  
+  /* =========================================================
+     TABLET
+     ========================================================= */
+  
+  @media (max-width: 1000px) {
+    .categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .photoGrid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  
+  @media (max-width: 700px) {
+    .work {
+      padding-top: 1rem;
+    }
+  
+    .intro {
+      padding: 1.5rem 0 2.5rem;
+    }
+  
+    .topRule span:last-child {
+      display: none;
+    }
+  
+    .introContent {
+      grid-template-columns: 1fr;
+  
+      gap: 1.25rem;
+  
+      padding-top: 2rem;
+    }
+  
+    .introTitle h1 {
+      font-size: clamp(3rem, 13vw, 4.6rem);
+    }
+  
+    .categories {
+      width: calc(100% - 1rem);
+  
+      grid-template-columns: repeat(2, 1fr);
+  
+      gap: 0.4rem;
+  
+      margin-bottom: 3rem;
+    }
+  
+    .categoryCard {
+      min-height: 10rem;
+  
+      padding: 0.85rem;
+    }
+  
+    .categoryCard h2 {
+      font-size: clamp(1.4rem, 7vw, 2rem);
+    }
+  
+    .archive {
+      width: calc(100% - 1rem);
+    }
+  
+    .archiveHeader p {
+      display: none;
+    }
+  
+    .photoGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+      gap: 0.4rem;
+    }
+  
+    .photoNumber {
+      display: none;
+    }
+  
+    .closing {
+      margin-top: 3.5rem;
+      padding-top: 2.75rem;
+    }
+  
+    .closing h2 {
+      font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+  }

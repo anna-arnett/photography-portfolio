@@ -1,0 +1,266 @@
+.page {
+    --cream: #eee5d5;
+    --cream-light: #f7f1e7;
+    --ink: #302b24;
+    --olive: #5f6249;
+    --rule: rgba(48, 43, 36, 0.26);
+  
+    min-height: 100vh;
+  
+    padding: 2.5rem 0 5rem;
+  
+    background: var(--cream);
+    color: var(--ink);
+  }
+  
+  
+  /* HEADER */
+  
+  .intro {
+    width: min(calc(100% - 3rem), 1180px);
+  
+    margin: 0 auto;
+    padding: 1.5rem 0 3rem;
+  }
+  
+  .rule {
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 0.55rem 0;
+  
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  
+    gap: 3rem;
+  
+    align-items: end;
+  
+    padding-top: 2.5rem;
+  }
+  
+  .heading > div:first-child > p,
+  .meta span {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.17em;
+  
+    color: rgba(48, 43, 36, 0.48);
+  }
+  
+  .heading h1 {
+    margin-top: 0.25rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+  
+    line-height: 0.86;
+  }
+  
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 3rem;
+  }
+  
+  .meta p {
+    margin-top: 0.25rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: 0.95rem;
+  }
+  
+  
+  /* NATURAL-RATIO GALLERY */
+  
+  .gallery {
+    width: min(calc(100% - 4rem), 1150px);
+  
+    margin: 0 auto;
+  
+    columns: 4;
+  
+    column-gap: 0.45rem;
+  }
+  
+  .photo {
+    width: 100%;
+  
+    margin-bottom: 0.45rem;
+  
+    break-inside: avoid;
+  
+    overflow: hidden;
+  }
+  
+  .photo img {
+    display: block;
+  
+    width: 100%;
+    height: auto;
+  
+    transition: transform 500ms ease;
+  }
+  
+  .photo:hover img {
+    transform: scale(1.012);
+  }
+  
+  
+  /* PREVIOUS / NEXT */
+  
+  .nextShoot {
+    width: min(calc(100% - 3rem), 1000px);
+  
+    margin: 5rem auto 0;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  
+  .nextShoot a {
+    padding: 1.2rem 0;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nextShoot a:first-child {
+    border-right: 1px solid var(--rule);
+  }
+  
+  .nextShoot a:last-child {
+    align-items: flex-end;
+  }
+  
+  .nextShoot span {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.43rem;
+    letter-spacing: 0.16em;
+  
+    color: rgba(48, 43, 36, 0.48);
+  }
+  
+  .nextShoot strong {
+    margin-top: 0.25rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  
+  /* CTA */
+  
+  .cta {
+    width: min(calc(100% - 3rem), 800px);
+  
+    margin: 4rem auto 0;
+    padding: 3.5rem 2rem;
+  
+    text-align: center;
+  
+    background: var(--olive);
+    color: var(--cream-light);
+  }
+  
+  .cta p {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.48rem;
+    letter-spacing: 0.17em;
+  }
+  
+  .cta h2 {
+    margin-top: 0.4rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+  }
+  
+  .cta a {
+    display: inline-block;
+  
+    margin-top: 1.2rem;
+    padding-bottom: 0.12rem;
+  
+    border-bottom: 1px solid currentColor;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+  }
+  
+  
+  /* TABLET */
+  
+  @media (max-width: 900px) {
+    .gallery {
+      columns: 3;
+    }
+  }
+  
+  
+  /* MOBILE */
+  
+  @media (max-width: 700px) {
+    .page {
+      padding-top: 1rem;
+    }
+  
+    .intro {
+      width: calc(100% - 2rem);
+  
+      padding-top: 1rem;
+    }
+  
+    .heading {
+      grid-template-columns: 1fr;
+  
+      gap: 1.4rem;
+    }
+  
+    .heading h1 {
+      font-size: clamp(4rem, 18vw, 6rem);
+    }
+  
+    .meta {
+      gap: 2rem;
+    }
+  
+    .gallery {
+      width: calc(100% - 1rem);
+  
+      columns: 2;
+  
+      column-gap: 0.35rem;
+    }
+  
+    .photo {
+      margin-bottom: 0.35rem;
+    }
+  
+    .nextShoot {
+      width: calc(100% - 2rem);
+  
+      margin-top: 3rem;
+    }
+  
+    .cta {
+      width: calc(100% - 1rem);
+    }
+  }

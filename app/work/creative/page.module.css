@@ -1,0 +1,772 @@
+.page {
+    --cream: #eee5d5;
+    --cream-light: #f7f1e7;
+    --ink: #302b24;
+  
+    --olive: #5e624b;
+    --olive-dark: #30372b;
+    --gold: #ad9363;
+  
+    --rule: rgba(48, 43, 36, 0.24);
+    --light-rule: rgba(247, 241, 231, 0.24);
+  
+    min-height: 100vh;
+  
+    padding: 2.5rem 0 5rem;
+  
+    background: var(--cream);
+    color: var(--ink);
+  }
+  
+  
+  /* =========================================================
+     TOP
+     ========================================================= */
+  
+  .top {
+    width: min(calc(100% - 3rem), 1320px);
+  
+    margin: 0 auto 1rem;
+  }
+  
+  .topRule {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  
+    padding: 0.55rem 0;
+  
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.16em;
+  }
+  
+  .topRule span:last-child {
+    justify-self: end;
+  }
+  
+  .topRule a {
+    transition: opacity 180ms ease;
+  }
+  
+  .topRule a:hover {
+    opacity: 0.5;
+  }
+  
+  
+  /* =========================================================
+     HERO
+     ========================================================= */
+  
+  .hero {
+    width: min(calc(100% - 1.5rem), 1450px);
+  
+    margin: 0 auto 6rem;
+    padding: 1rem 3rem 2rem;
+  
+    background: var(--olive-dark);
+    color: var(--cream-light);
+  }
+  
+  .heroRule {
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 0 0 0.7rem;
+  
+    border-bottom: 1px solid var(--light-rule);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.44rem;
+    letter-spacing: 0.17em;
+  
+    color: rgba(247, 241, 231, 0.68);
+  }
+  
+  .heroComposition {
+    position: relative;
+  
+    width: min(100%, 1050px);
+  
+    margin: 3rem auto 0;
+  
+    display: grid;
+    grid-template-columns: 1.25fr 0.55fr;
+  
+    gap: 2rem;
+  
+    align-items: end;
+  }
+  
+  .heroMain {
+    width: 100%;
+  }
+  
+  .heroMain img,
+  .heroInset img {
+    display: block;
+  
+    width: 100%;
+    height: auto;
+  }
+  
+  .heroInset {
+    width: 100%;
+  
+    margin-bottom: -2rem;
+  }
+  
+  
+  /*
+    The title crosses the photographic composition,
+    but does not dictate either image's crop.
+  */
+  
+  .heroTitle {
+    position: absolute;
+    z-index: 2;
+  
+    left: 47%;
+    top: 48%;
+  
+    transform: translate(-50%, -50%);
+  
+    width: 80%;
+  
+    pointer-events: none;
+  
+    text-align: center;
+  
+    text-shadow: 0 2px 22px rgba(0, 0, 0, 0.32);
+  }
+  
+  .heroTitle p {
+    margin-bottom: 0.4rem;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.43rem;
+    letter-spacing: 0.2em;
+  }
+  
+  .heroTitle h1 {
+    font-family: var(--font-serif), serif;
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    font-weight: 400;
+  
+    line-height: 0.76;
+    letter-spacing: -0.055em;
+  }
+  
+  .heroTitle h1 em {
+    font-weight: 400;
+  }
+  
+  .heroBottom {
+    width: min(100%, 1050px);
+  
+    margin: 3.5rem auto 0;
+    padding-top: 1rem;
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  
+    gap: 3rem;
+  
+    border-top: 1px solid var(--light-rule);
+  }
+  
+  .heroBottom p {
+    max-width: 41ch;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.7;
+  
+    color: rgba(247, 241, 231, 0.7);
+  }
+  
+  .heroBottom a {
+    flex-shrink: 0;
+  
+    padding-bottom: 0.12rem;
+  
+    border-bottom: 1px solid currentColor;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.14em;
+  
+    transition: opacity 180ms ease;
+  }
+  
+  .heroBottom a:hover {
+    opacity: 0.6;
+  }
+  
+  
+  /* =========================================================
+     SHARED STUDY
+     ========================================================= */
+  
+  .study {
+    width: min(calc(100% - 3rem), 1220px);
+  
+    margin: 0 auto 7rem;
+  }
+  
+  .studyHeader {
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 0.55rem 0;
+  
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.44rem;
+    letter-spacing: 0.17em;
+  }
+  
+  .study img {
+    display: block;
+  
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /* =========================================================
+     STUDY 01 — LIGHT
+     ========================================================= */
+  
+  .studyOneLayout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  
+    column-gap: 1rem;
+  
+    align-items: center;
+  
+    padding-top: 3.5rem;
+  }
+  
+  .studyOnePrimary {
+    grid-column: 1 / span 4;
+  }
+  
+  .studyCopy {
+    grid-column: 6 / span 3;
+  
+    align-self: center;
+  }
+  
+  .studyCopy > span {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.43rem;
+    letter-spacing: 0.17em;
+  
+    color: rgba(48, 43, 36, 0.46);
+  }
+  
+  .studyCopy h2 {
+    margin-top: 0.4rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 400;
+  
+    line-height: 0.92;
+  }
+  
+  .studyCopy h2 em {
+    font-weight: 400;
+  }
+  
+  .studyCopy p {
+    max-width: 29ch;
+  
+    margin-top: 1rem;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.7;
+  
+    color: rgba(48, 43, 36, 0.64);
+  }
+  
+  .studyOneSecondary {
+    grid-column: 10 / span 3;
+  
+    margin-top: 5rem;
+  }
+  
+  
+  /* =========================================================
+     STUDY 02 — MOTION
+     ========================================================= */
+  
+  .darkStudy {
+    width: 100%;
+  
+    margin-bottom: 7rem;
+    padding: 4rem max(1.5rem, calc((100% - 1220px) / 2));
+  
+    background: #21251f;
+    color: var(--cream-light);
+  }
+  
+  .darkStudy .studyHeader {
+    border-color: var(--light-rule);
+  }
+  
+  .studyTwoLayout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  
+    column-gap: 1rem;
+  
+    align-items: center;
+  
+    padding-top: 3.5rem;
+  }
+  
+  .studyTwoSmall {
+    grid-column: 1 / span 3;
+  
+    margin-top: 6rem;
+  }
+  
+  .studyTwoLarge {
+    position: relative;
+  
+    grid-column: 5 / span 5;
+  }
+  
+  .studyTwoLarge::after {
+    content: "";
+  
+    position: absolute;
+    inset: 0;
+  
+    background: rgba(16, 15, 12, 0.15);
+  
+    pointer-events: none;
+  }
+  
+  .motionTitle {
+    position: absolute;
+    z-index: 2;
+  
+    top: 50%;
+    left: 50%;
+  
+    width: 90%;
+  
+    transform: translate(-50%, -50%);
+  
+    text-align: center;
+  
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+  }
+  
+  .motionTitle span {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.42rem;
+    letter-spacing: 0.17em;
+  }
+  
+  .motionTitle h2 {
+    margin-top: 0.35rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(2.7rem, 4.5vw, 4.7rem);
+    font-weight: 400;
+  }
+  
+  .motionCopy {
+    grid-column: 11 / span 2;
+  
+    align-self: end;
+  
+    padding-bottom: 1rem;
+  }
+  
+  .motionCopy p {
+    font-family: var(--font-serif), serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+  
+    color: rgba(247, 241, 231, 0.68);
+  }
+  
+  
+  /* =========================================================
+     STUDY 03 — PLACE
+     ========================================================= */
+  
+  .studyThreeLayout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  
+    column-gap: 1rem;
+  
+    align-items: start;
+  
+    padding-top: 3.5rem;
+  }
+  
+  .placeIntro {
+    grid-column: 1 / span 3;
+  
+    padding-top: 3rem;
+  }
+  
+  .placeIntro > span {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.43rem;
+    letter-spacing: 0.17em;
+  
+    color: rgba(48, 43, 36, 0.46);
+  }
+  
+  .placeIntro h2 {
+    margin-top: 0.4rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 400;
+  
+    line-height: 0.92;
+  }
+  
+  .placeIntro h2 em {
+    font-weight: 400;
+  }
+  
+  .placeIntro p {
+    margin-top: 1rem;
+  
+    max-width: 28ch;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.7;
+  
+    color: rgba(48, 43, 36, 0.64);
+  }
+  
+  .trainPhoto {
+    grid-column: 5 / span 3;
+  }
+  
+  .conversePhoto {
+    grid-column: 8 / span 5;
+  
+    margin-top: 7rem;
+  }
+  
+  
+  /* =========================================================
+     CLOSING
+     ========================================================= */
+  
+  .closing {
+    width: min(calc(100% - 3rem), 950px);
+  
+    margin: 0 auto;
+  }
+  
+  .closingRule {
+    display: flex;
+    justify-content: space-between;
+  
+    padding: 0.55rem 0;
+  
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.44rem;
+    letter-spacing: 0.17em;
+  }
+  
+  .closingContent {
+    padding: 4rem 1rem 1rem;
+  
+    text-align: center;
+  }
+  
+  .closingContent > p:first-child {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.46rem;
+    letter-spacing: 0.18em;
+  }
+  
+  .closingContent h2 {
+    margin-top: 0.5rem;
+  
+    font-family: var(--font-serif), serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 400;
+  
+    line-height: 0.88;
+  }
+  
+  .closingContent h2 em {
+    font-weight: 400;
+  }
+  
+  .closingCopy {
+    max-width: 40ch;
+  
+    margin: 1rem auto 0;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.7;
+  
+    color: rgba(48, 43, 36, 0.65);
+  }
+  
+  .closingContent a {
+    display: inline-block;
+  
+    margin-top: 1.4rem;
+    padding-bottom: 0.12rem;
+  
+    border-bottom: 1px solid currentColor;
+  
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
+  
+    transition: opacity 180ms ease;
+  }
+  
+  .closingContent a:hover {
+    opacity: 0.5;
+  }
+  
+  
+  /* =========================================================
+     TABLET
+     ========================================================= */
+  
+  @media (max-width: 950px) {
+    .hero {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .studyOnePrimary {
+      grid-column: 1 / span 4;
+    }
+  
+    .studyCopy {
+      grid-column: 6 / span 4;
+    }
+  
+    .studyOneSecondary {
+      grid-column: 10 / span 3;
+    }
+  
+    .studyTwoSmall {
+      grid-column: 1 / span 3;
+    }
+  
+    .studyTwoLarge {
+      grid-column: 4 / span 6;
+    }
+  
+    .motionCopy {
+      grid-column: 10 / span 3;
+    }
+  
+    .placeIntro {
+      grid-column: 1 / span 3;
+    }
+  
+    .trainPhoto {
+      grid-column: 5 / span 3;
+    }
+  
+    .conversePhoto {
+      grid-column: 8 / span 5;
+    }
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  
+  @media (max-width: 700px) {
+    .page {
+      padding-top: 1rem;
+    }
+  
+    .top {
+      width: calc(100% - 2rem);
+    }
+  
+    .topRule {
+      grid-template-columns: 1fr auto;
+    }
+  
+    .topRule span:nth-child(2) {
+      display: none;
+    }
+  
+  
+    /* hero */
+  
+    .hero {
+      width: calc(100% - 1rem);
+  
+      margin-bottom: 4rem;
+      padding: 1rem;
+    }
+  
+    .heroRule span:last-child {
+      display: none;
+    }
+  
+    .heroComposition {
+      display: block;
+  
+      margin-top: 2rem;
+    }
+  
+    .heroMain {
+      width: 88%;
+    }
+  
+    .heroInset {
+      width: 50%;
+  
+      margin: -2rem 0 0 auto;
+    }
+  
+    .heroTitle {
+      left: 50%;
+      top: 45%;
+  
+      width: 94%;
+    }
+  
+    .heroTitle h1 {
+      font-size: clamp(4rem, 19vw, 6rem);
+    }
+  
+    .heroBottom {
+      margin-top: 3rem;
+  
+      display: block;
+    }
+  
+    .heroBottom a {
+      display: inline-block;
+  
+      margin-top: 1.3rem;
+    }
+  
+  
+    /* studies */
+  
+    .study {
+      width: calc(100% - 2rem);
+  
+      margin-bottom: 4.5rem;
+    }
+  
+    .studyOneLayout,
+    .studyTwoLayout,
+    .studyThreeLayout {
+      display: flex;
+      flex-direction: column;
+  
+      gap: 2.5rem;
+  
+      padding-top: 2rem;
+    }
+  
+    .studyOnePrimary {
+      width: 72%;
+    }
+  
+    .studyCopy {
+      width: 78%;
+  
+      margin-left: auto;
+    }
+  
+    .studyOneSecondary {
+      width: 58%;
+  
+      margin: 0 0 0 auto;
+    }
+  
+  
+    /* dark motion section */
+  
+    .darkStudy {
+      width: 100%;
+  
+      padding: 3rem 1rem;
+    }
+  
+    .studyTwoSmall {
+      width: 55%;
+  
+      margin: 0;
+    }
+  
+    .studyTwoLarge {
+      width: 86%;
+  
+      margin-left: auto;
+    }
+  
+    .motionCopy {
+      width: 65%;
+  
+      margin-left: auto;
+    }
+  
+  
+    /* place */
+  
+    .placeIntro {
+      width: 82%;
+  
+      padding: 0;
+    }
+  
+    .trainPhoto {
+      width: 57%;
+  
+      margin-left: auto;
+    }
+  
+    .conversePhoto {
+      width: 90%;
+  
+      margin: 0;
+    }
+  
+  
+    /* closing */
+  
+    .closing {
+      width: calc(100% - 2rem);
+    }
+  
+    .closingContent {
+      padding-top: 3rem;
+    }
+  }

@@ -1,150 +1,854 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+.home {
+  --cream: #eee5d5;
+  --cream-deep: #dfd3be;
+  --cream-light: #f5efe4;
 
-  --text-primary: #000;
-  --text-secondary: #666;
+  --olive: #606248;
+  --olive-dark: #3d4232;
+  --forest: #30362a;
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+  --brown: #514639;
+  --ink: #302b24;
+  --gold: #ad9363;
 
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  width: 100%;
+  overflow: hidden;
+
+  background: var(--cream);
+  color: var(--ink);
 }
 
-.main {
+
+/* =========================================================
+   SHARED
+   ========================================================= */
+
+.kicker,
+.lightKicker {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.kicker {
+  color: rgba(48, 43, 36, 0.65);
+}
+
+.lightKicker {
+  color: rgba(245, 239, 228, 0.8);
+}
+
+.textLink,
+.lightLink {
+  display: inline-block;
+
+  padding-bottom: 0.15rem;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: opacity 200ms ease;
+}
+
+.textLink {
+  border-bottom: 1px solid rgba(48, 43, 36, 0.65);
+}
+
+.lightLink {
+  color: var(--cream-light);
+
+  border-bottom: 1px solid rgba(245, 239, 228, 0.65);
+}
+
+.textLink:hover,
+.lightLink:hover {
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  width: calc(100% - 1.5rem);
+  max-width: 1600px;
+  min-height: 78vh;
+
+  margin: 0.75rem auto 0;
+
+  overflow: hidden;
+}
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.heroMedia img {
+  object-fit: cover;
+  object-position: center 48%;
+
+  transition: transform 1.2s ease;
+}
+
+.hero:hover .heroMedia img {
+  transform: scale(1.012);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(32, 25, 17, 0.18),
+    rgba(32, 25, 17, 0.27) 42%,
+    rgba(32, 25, 17, 0.38)
+  );
+
+  pointer-events: none;
+}
+
+.heroCopy {
+  position: absolute;
+  z-index: 2;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(42rem, 86%);
+
+  transform: translate(-50%, -48%);
+
+  text-align: center;
+
+  color: #f8f0e4;
+
+  text-shadow:
+    0 2px 12px rgba(24, 17, 10, 0.34),
+    0 1px 2px rgba(24, 17, 10, 0.28);
+}
+
+
+/* Coffee logo */
+
+.heroLogo {
   display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0 auto 0.75rem;
+}
+
+.coffeeLogo {
+  width: 4.2rem;
+  height: auto;
+
+  opacity: 0.95;
+}
+
+
+/* Photographer name */
+
+.heroCopy h1 {
+  margin: 0;
+
+  font-family: var(--font-monogram), serif;
+  font-size: clamp(4.4rem, 7vw, 7.3rem);
+  font-weight: 400;
+  font-style: italic;
+
+  line-height: 0.84;
+  letter-spacing: -0.045em;
+
+  transform: translateX(-0.04em);
+}
+
+
+/* Main descriptor */
+
+.heroKicker {
+  max-width: 38rem;
+
+  margin: 1.2rem auto 0;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  line-height: 1.4;
+  letter-spacing: 0.055em;
+
+  color: rgba(248, 240, 228, 0.97);
+
+  text-shadow:
+    0 1px 8px rgba(24, 17, 10, 0.5),
+    0 1px 2px rgba(24, 17, 10, 0.4);
+}
+
+.explore {
+  position: absolute;
+  z-index: 2;
+
+  left: 50%;
+  bottom: 1.5rem;
+
+  transform: translateX(-50%);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+
+  color: rgba(248, 240, 228, 0.92);
+
+  text-shadow: 0 1px 5px rgba(24, 17, 10, 0.4);
+}
+
+
+/* =========================================================
+   EDITORIAL INTRO
+   ========================================================= */
+
+.introSpread {
+  position: relative;
+
+  width: min(calc(100% - 2rem), 1240px);
+
+  margin: 0 auto;
+  padding: 5.5rem 0 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  column-gap: 1.4rem;
+  row-gap: 1.25rem;
+}
+
+.introRule {
+  grid-column: 1 / -1;
+
+  display: flex;
   justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+
+  padding: 0.6rem 0;
+
+  border-top: 1px solid rgba(48, 43, 36, 0.32);
+  border-bottom: 1px solid rgba(48, 43, 36, 0.32);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.13em;
 }
 
-.intro {
+.lydiaPhoto,
+.shadowPhoto {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.lydiaPhoto {
+  grid-column: 1 / span 4;
+
+  aspect-ratio: 3 / 4;
+
+  margin-top: 2.4rem;
+
+  border: 1px solid rgba(48, 43, 36, 0.2);
+}
+
+.lydiaPhoto img,
+.shadowPhoto img {
+  object-fit: cover;
+
+  transition: transform 700ms ease;
+}
+
+.lydiaPhoto:hover img,
+.shadowPhoto:hover img {
+  transform: scale(1.015);
+}
+
+.introCopy {
+  grid-column: 5 / span 5;
+
+  align-self: center;
+
+  padding: 2rem 1.5rem;
+
+  text-align: center;
+}
+
+.spark {
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  color: var(--olive);
+
+  font-size: 1rem;
+}
+
+.italicIntro {
+  font-family: var(--font-serif), serif;
+  font-size: 1.55rem;
+  font-style: italic;
+
+  color: var(--olive);
+}
+
+.introCopy h2 {
+  max-width: 15ch;
+
+  margin: 0.35rem auto 0;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2rem, 3vw, 3.3rem);
+  font-weight: 400;
+
+  line-height: 0.98;
+}
+
+.bodyCopy {
+  max-width: 40ch;
+
+  margin: 1.2rem auto 0;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.87rem;
+  line-height: 1.65;
+
+  color: rgba(48, 43, 36, 0.78);
+}
+
+.introCopy .textLink {
+  margin-top: 1.4rem;
+}
+
+.shadowPhoto {
+  grid-column: 10 / span 3;
+
+  aspect-ratio: 3 / 4;
+
+  align-self: end;
+
+  margin-bottom: 1.5rem;
+
+  border: 1px solid rgba(48, 43, 36, 0.2);
+}
+
+.tinyNote {
+  grid-column: 10 / span 3;
+
+  justify-self: end;
+
+  margin-top: -0.35rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: 0.82rem;
+  font-style: italic;
+
+  color: rgba(48, 43, 36, 0.58);
+}
+
+
+/* =========================================================
+   PORTRAIT REEL
+   ========================================================= */
+
+.portraitReel {
+  width: calc(100% - 1.5rem);
+  max-width: 1600px;
+
+  margin: 0 auto;
+  padding: 1rem 0 1.25rem;
+}
+
+.portraitReelHeader {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+
+  margin-bottom: 0.7rem;
+  padding: 0.55rem 0;
+
+  border-top: 1px solid rgba(48, 43, 36, 0.3);
+  border-bottom: 1px solid rgba(48, 43, 36, 0.3);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.13em;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.portraitReelHeader a {
+  transition: opacity 200ms ease;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.portraitReelHeader a:hover {
+  opacity: 0.5;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
+.portraitGrid {
+  display: grid;
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+  grid-template-columns:
+    0.85fr
+    1fr
+    1.2fr
+    0.9fr
+    1.05fr;
+
+  gap: 0.55rem;
+
+  align-items: center;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
+.reelPhoto {
+  position: relative;
 
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.reelPhoto img {
+  object-fit: cover;
 
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+  transition:
+    transform 700ms ease,
+    filter 700ms ease;
 }
 
-.code {
-  font-family: var(--font-geist-mono);
-  font-size: 0.9em;
-  background: color-mix(in srgb, currentColor 8%, transparent);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
+.reelPhoto:hover img {
+  transform: scale(1.02);
+
+  filter: brightness(1.025);
+}
+
+.reelOne {
+  aspect-ratio: 3 / 4;
+}
+
+.reelTwo {
+  aspect-ratio: 4 / 5;
+}
+
+.reelThree {
+  aspect-ratio: 3 / 4;
+}
+
+.reelFour {
+  aspect-ratio: 4 / 5;
+}
+
+.reelFive {
+  aspect-ratio: 3 / 4;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.aboutFeature {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  min-height: 24rem;
+
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+
+  overflow: hidden;
+
+  background: var(--olive-dark);
+  color: var(--cream-light);
+}
+
+
+/* Decorative monogram */
+
+.aboutMonogram {
+  position: absolute;
+  z-index: -1;
+
+  left: 53%;
+  top: 50%;
+
+  transform: translate(-50%, -50%) rotate(-4deg);
+
+  font-family: var(--font-monogram), serif;
+  font-size: clamp(15rem, 29vw, 30rem);
+  font-weight: 400;
+  font-style: italic;
+
+  line-height: 0.7;
+  letter-spacing: -0.22em;
+
+  color: rgba(245, 239, 228, 0.035);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* Portrait */
+
+.aboutFeatureVisual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 2.5rem 2rem;
+}
+
+.selfPortrait {
+  position: relative;
+
+  width: min(60%, 15rem);
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  border-radius: 999px 999px 0 0;
+
+  border: 1px solid rgba(245, 239, 228, 0.35);
+}
+
+.selfPortrait img {
+  object-fit: cover;
+
+  transition: transform 700ms ease;
+}
+
+.selfPortrait:hover img {
+  transform: scale(1.015);
+}
+
+
+/* Copy */
+
+.aboutFeatureCopy {
+  align-self: center;
+
+  max-width: 31rem;
+
+  padding: 2.75rem 4rem 2.75rem 2rem;
+}
+
+.aboutFeatureCopy h2 {
+  max-width: 15ch;
+
+  margin-top: 0.55rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(2rem, 2.8vw, 3.1rem);
+  font-weight: 400;
+
+  line-height: 0.97;
+}
+
+.aboutFeatureCopy > p:not(.lightKicker) {
+  max-width: 32ch;
+
+  margin-top: 0.9rem;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.65;
+
+  color: rgba(245, 239, 228, 0.78);
+}
+
+.aboutFeatureCopy .lightLink {
+  margin-top: 1.15rem;
+}
+
+.aboutStar {
+  position: absolute;
+
+  right: 1.5rem;
+  bottom: 1.2rem;
+
+  color: var(--gold);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+  position: relative;
+
+  width: calc(100% - 1.5rem);
+  max-width: 1600px;
+  min-height: 62vh;
+
+  margin: 0.75rem auto;
+
+  overflow: hidden;
+}
+
+.closingMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.closingMedia img {
+  object-fit: cover;
+
+  transition: transform 1.2s ease;
+}
+
+.closing:hover .closingMedia img {
+  transform: scale(1.012);
+}
+
+.closingOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    to right,
+    rgba(28, 31, 27, 0.05) 0%,
+    rgba(28, 31, 27, 0.05) 42%,
+    rgba(28, 31, 27, 0.13) 100%
+  );
+
+  pointer-events: none;
+}
+
+.closingCopy {
+  position: absolute;
+  z-index: 2;
+
+  left: 61%;
+  top: 40%;
+
+  width: min(36rem, 34vw);
+
+  transform: translateY(-50%);
+
+  text-align: left;
+
+  color: var(--cream-light);
+
+  text-shadow:
+    0 2px 12px rgba(26, 29, 25, 0.18),
+    0 1px 2px rgba(26, 29, 25, 0.14);
+}
+
+.closingCopy .lightKicker {
+  color: rgba(245, 239, 228, 0.9);
+}
+
+.closingCopy h2 {
+  margin-top: 0.65rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(3rem, 4.8vw, 5.4rem);
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.closingAccent {
+  margin-top: 0.2rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1.9rem, 3.1vw, 3.3rem);
+  font-style: italic;
+
+  line-height: 1;
+}
+
+.closingCopy .lightLink {
+  margin-top: 1.5rem;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .hero,
+  .closing {
+    width: calc(100% - 1rem);
+  }
+
+  .hero {
+    min-height: 72svh;
+
+    margin-top: 0.5rem;
+  }
+
+  .heroCopy {
+    width: 90%;
+
+    transform: translate(-50%, -48%);
+  }
+
+  .coffeeLogo {
+    width: 3.6rem;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(3.7rem, 17vw, 5.3rem);
+  }
+
+  .heroKicker {
+    max-width: 22rem;
+
+    margin: 1rem auto 0;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+    letter-spacing: 0.045em;
+  }
+
+
+  /* Editorial intro */
+
+  .introSpread {
+    width: calc(100% - 2rem);
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    padding: 3.5rem 0 3rem;
+  }
+
+  .introRule {
+    grid-column: 1 / -1;
+
+    font-size: 0.6rem;
+  }
+
+  .lydiaPhoto {
+    grid-column: 1 / span 4;
+
+    margin-top: 1rem;
+  }
+
+  .introCopy {
+    grid-column: 1 / -1;
+    grid-row: 3;
+
+    padding: 2rem 0;
+  }
+
+  .introCopy h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .bodyCopy {
+    font-size: 0.85rem;
+  }
+
+  .shadowPhoto {
+    grid-column: 4 / span 3;
+
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .tinyNote {
+    display: none;
+  }
+
+
+  /* Portrait reel */
+
+  .portraitReel {
+    width: calc(100% - 1rem);
+  }
+
+  .portraitReelHeader {
+    font-size: 0.6rem;
+  }
+
+  .portraitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reelThree {
+    grid-column: 1 / span 2;
+
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* About */
+
+  .aboutFeature {
+    grid-template-columns: 0.8fr 1.2fr;
+
+    min-height: auto;
+  }
+
+  .aboutFeatureVisual {
+    padding: 2rem 0.5rem 2rem 1rem;
+  }
+
+  .selfPortrait {
+    width: 88%;
+  }
+
+  .aboutFeatureCopy {
+    padding: 2rem 1rem;
+  }
+
+  .aboutFeatureCopy h2 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .aboutFeatureCopy > p:not(.lightKicker) {
+    font-size: 0.8rem;
+  }
+
+  .aboutMonogram {
+    left: 58%;
+
+    font-size: 16rem;
+    letter-spacing: -0.24em;
+  }
+
+
+  /* Closing */
+
+  .closing {
+    min-height: 54svh;
+  }
+
+  .closingCopy {
+    left: 50%;
+    top: 50%;
+
+    width: 82%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+  }
+
+  .closingCopy h2 {
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+  }
+
+  .closingAccent {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
 }

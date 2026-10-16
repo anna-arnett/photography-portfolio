@@ -1,0 +1,400 @@
+.page {
+  --cream: #eee5d5;
+  --cream-light: #f7f1e7;
+  --ink: #302b24;
+
+  --olive: #5f6249;
+  --blue: #9dabb2;
+
+  --rule: rgba(48, 43, 36, 0.26);
+
+  min-height: 100vh;
+
+  padding: 2.5rem 0 5rem;
+
+  background: var(--cream);
+  color: var(--ink);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  width: min(calc(100% - 3rem), 1320px);
+
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+.rule {
+  padding: 0.55rem 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+}
+
+.rule a {
+  transition: opacity 180ms ease;
+}
+
+.rule a:hover {
+  opacity: 0.5;
+}
+
+.heading {
+  padding-top: 2.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  align-items: end;
+
+  gap: 3rem;
+}
+
+.heading > div:first-child > p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+
+  color: rgba(48, 43, 36, 0.48);
+}
+
+.heading h1 {
+  margin-top: 0.3rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  font-weight: 400;
+
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+
+.meta {
+  min-width: 18rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+}
+
+.meta span {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.44rem;
+  letter-spacing: 0.16em;
+
+  color: rgba(48, 43, 36, 0.48);
+}
+
+.meta p {
+  margin-top: 0.25rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   OPENING PORTRAIT
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  width: min(28vw, 420px);
+  aspect-ratio: 4 / 5;
+
+  margin: 0 auto 3.5rem;
+
+  overflow: hidden;
+
+  background: #d7cebe;
+}
+
+.hero img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroLabel {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 0.55rem 0.65rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: rgba(40, 37, 30, 0.48);
+  color: var(--cream-light);
+
+  backdrop-filter: blur(5px);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.44rem;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallerySection {
+  width: min(calc(100% - 4rem), 1180px);
+
+  margin: 0 auto;
+}
+
+.galleryRule {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.46rem;
+  letter-spacing: 0.15em;
+}
+
+
+/*
+  Natural-ratio gallery.
+
+  Nothing is cropped and nothing spans multiple columns.
+  Each photo uses its actual proportions.
+*/
+
+.gallery {
+  columns: 4;
+  column-gap: 0.45rem;
+}
+
+.photo {
+  width: 100%;
+
+  margin: 0 0 0.45rem;
+
+  display: block;
+
+  break-inside: avoid;
+
+  overflow: hidden;
+
+  background: #d7cebe;
+}
+
+.photo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 600ms ease,
+    filter 600ms ease;
+}
+
+.photo:hover img {
+  transform: scale(1.012);
+  filter: brightness(1.01);
+}
+
+
+/* =========================================================
+   PREVIOUS / NEXT
+   ========================================================= */
+
+.nextShoot {
+  width: min(calc(100% - 3rem), 1100px);
+
+  margin: 5rem auto 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nextShoot a {
+  padding: 1.25rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: opacity 180ms ease;
+}
+
+.nextShoot a:first-child {
+  border-right: 1px solid var(--rule);
+}
+
+.nextShoot a:last-child {
+  align-items: flex-end;
+}
+
+.nextShoot a:hover {
+  opacity: 0.55;
+}
+
+.nextShoot span {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.44rem;
+  letter-spacing: 0.16em;
+
+  color: rgba(48, 43, 36, 0.5);
+}
+
+.nextShoot strong {
+  margin-top: 0.3rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+  width: min(calc(100% - 3rem), 850px);
+
+  margin: 4rem auto 0;
+  padding: 3.5rem 2rem;
+
+  text-align: center;
+
+  background: var(--blue);
+  color: var(--cream-light);
+}
+
+.cta p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.48rem;
+  letter-spacing: 0.18em;
+}
+
+.cta h2 {
+  margin-top: 0.4rem;
+
+  font-family: var(--font-serif), serif;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 400;
+}
+
+.cta a {
+  display: inline-block;
+
+  margin-top: 1.2rem;
+  padding-bottom: 0.12rem;
+
+  border-bottom: 1px solid currentColor;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    width: min(42vw, 400px);
+  }
+
+  .gallery {
+    columns: 3;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .page {
+    padding-top: 1rem;
+  }
+
+  .intro {
+    width: calc(100% - 2rem);
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .heading h1 {
+    font-size: clamp(4rem, 20vw, 6rem);
+  }
+
+  .meta {
+    min-width: 0;
+  }
+
+  .hero {
+    width: min(78vw, 360px);
+    aspect-ratio: 4 / 5;
+
+    margin-bottom: 2.5rem;
+  }
+
+  .gallerySection {
+    width: calc(100% - 1rem);
+  }
+
+  .gallery {
+    columns: 2;
+
+    column-gap: 0.35rem;
+  }
+
+  .photo {
+    margin-bottom: 0.35rem;
+  }
+
+  .nextShoot {
+    width: calc(100% - 2rem);
+
+    margin-top: 3rem;
+  }
+
+  .nextShoot strong {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    width: calc(100% - 1rem);
+
+    padding: 3rem 1rem;
+  }
+}
