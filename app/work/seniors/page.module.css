@@ -92,6 +92,14 @@
   
     color: var(--olive);
   }
+
+  .subtitleNotItalic {
+    margin-top: 1rem;
+
+    font-family: var(--font-serif), serif;
+    font-size: clamp(1rem, 1.8vw, 1.8rem);
+    color: var(--olive);
+  }
   
   .introBottom {
     display: grid;

@@ -4,9 +4,20 @@ import styles from "./page.module.css";
 import { portraitShoots } from "./shoots";
 
 export default function PortraitsPage() {
-  const heroA = portraitShoots[0];
-  const heroB = portraitShoots[1];
-  const featured = portraitShoots.slice(0, 6);
+  const portraitSessions = portraitShoots.filter(
+    (shoot) =>
+      !shoot.type.toLowerCase().includes("headshot")
+  );
+
+  const headshotSessions = portraitShoots.filter(
+    (shoot) =>
+      shoot.type.toLowerCase().includes("headshot")
+  );
+
+  const heroA = portraitSessions[0];
+  const heroB = portraitSessions[2];
+
+  const featured = portraitSessions.slice(0, 6);
 
   return (
     <main className={styles.page}>
@@ -14,7 +25,9 @@ export default function PortraitsPage() {
       <section className={styles.top}>
         <div className={styles.topRule}>
           <Link href="/work">← SELECTED WORK</Link>
+
           <span>PORTRAITS + HEADSHOTS</span>
+
           <span>CHICAGO, IL</span>
         </div>
       </section>
@@ -51,42 +64,14 @@ export default function PortraitsPage() {
           <div className={styles.heroWash} />
 
           <div className={styles.heroTitle}>
-            <span className={styles.heroSmall}>
-              ANNA ARNETT / PEOPLE / VOL. 01
-            </span>
-
-            <h1>
-              The Portrait
-              <br />
-              <em>Index</em>
-            </h1>
-
-            <span className={styles.heroSub}>
-              portraits · headshots · people
-            </span>
+            <h1>Portraits</h1>
           </div>
         </section>
       )}
 
       {/* COLLECTION INTRO */}
       <section className={styles.collectionIntro}>
-        <div className={styles.collectionRule}>
-          <span>FEATURED GALLERIES</span>
-          <span>
-            {String(featured.length).padStart(2, "0")} COLLECTIONS
-          </span>
-        </div>
-
         <div className={styles.collectionHeading}>
-          <div>
-            <p className={styles.eyebrow}>PORTRAIT STUDIES</p>
-
-            <h2>
-              Faces, light,
-              <br />
-              <em>and the places around them.</em>
-            </h2>
-          </div>
 
           <div className={styles.indexList}>
             {featured.map((shoot, index) => (
@@ -94,7 +79,10 @@ export default function PortraitsPage() {
                 href={`/work/portraits/${shoot.slug}`}
                 key={shoot.slug}
               >
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
                 <span>{shoot.name}</span>
               </Link>
             ))}
@@ -137,26 +125,67 @@ export default function PortraitsPage() {
               </div>
 
               <p>
-                {shoot.type} · {shoot.location} · {shoot.date}
+                {shoot.type} · {shoot.location} ·{" "}
+                {shoot.date}
               </p>
             </div>
           </Link>
         ))}
       </section>
 
+      {/* HEADSHOTS */}
+      {headshotSessions.length > 0 && (
+        <section className={styles.headshots}>
+
+          <div className={styles.headshotHeading}>
+            <div>
+
+              <h2>Headshots</h2>
+            </div>
+          </div>
+
+          <div className={styles.headshotViewport}>
+            <div className={styles.headshotStrip}>
+              {headshotSessions.map((shoot, index) => (
+                <figure
+                  className={styles.headshotFrame}
+                  key={shoot.slug}
+                >
+                  <div className={styles.headshotImage}>
+                    <img
+                      src={shoot.cover}
+                      alt={`${shoot.name} headshot`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <span className={styles.headshotNumber}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  <figcaption>
+                    <span>{shoot.name}</span>
+
+                    <span>
+                      {shoot.location} · {shoot.date}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <p className={styles.headshotHint}>
+            SCROLL TO VIEW →
+          </p>
+        </section>
+      )}
+
       {/* CTA */}
       <section className={styles.cta}>
-        <p>PORTRAITS / HEADSHOTS / SOMETHING ELSE</p>
 
-        <h2>
-          Have an idea?
-          <br />
-          <em>Let&apos;s photograph it.</em>
-        </h2>
-
-        <Link href="/inquire">
-          GET IN TOUCH →
-        </Link>
+        <Link href="/inquire">GET IN TOUCH →</Link>
       </section>
     </main>
   );

@@ -4,17 +4,17 @@ import styles from "./page.module.css";
 
 const archivePhotos = [
   {
-    src: "/photos/lydiasenior.JPG",
+    src: "/photos/place-room.jpg",
     alt: "Senior portrait among wildflowers",
     href: "/work/seniors",
   },
   {
-    src: "/photos/regan.jpg",
+    src: "/photos/marlokate2.jpg",
     alt: "Portrait in warm field light",
     href: "/work/seniors",
   },
   {
-    src: "/photos/shadow.jpg",
+    src: "/photos/strike2.jpg",
     alt: "Creative portrait with patterned shadow",
     href: "/work/creative",
   },
@@ -24,42 +24,42 @@ const archivePhotos = [
     href: "/work/portraits",
   },
   {
-    src: "/photos/converse.jpg",
+    src: "/photos/teresa.jpg",
     alt: "Waves splashing around Converse shoes",
     href: "/work/creative",
   },
   {
-    src: "/photos/ava.jpg",
+    src: "/photos/motion-laugh.jpg",
     alt: "Portrait in soft natural light",
     href: "/work/portraits",
   },
   {
-    src: "/photos/traincool.jpg",
+    src: "/photos/motion-dance.jpg",
     alt: "Chicago train framed by foliage and architecture",
     href: "/work/creative",
   },
   {
-    src: "/photos/sam.jpg",
+    src: "/photos/shadow.jpg",
     alt: "Creative portrait in natural light",
     href: "/work/portraits",
   },
   {
-    src: "/photos/jakeball.jpg",
+    src: "/photos/cooljake.jpg",
     alt: "Candid laughing portrait",
     href: "/work/portraits",
   },
   {
-    src: "/photos/strike2.jpg",
+    src: "/photos/lydia-stair.jpg",
     alt: "Black and white figure in the water",
     href: "/work/creative",
   },
   {
-    src: "/photos/motion-dance.jpg",
+    src: "/photos/regan.jpg",
     alt: "Experimental portrait in snow",
     href: "/work/creative",
   },
   {
-    src: "/photos/lydiasenior.JPG",
+    src: "/photos/ava3.jpg",
     alt: "Senior portrait in natural surroundings",
     href: "/work/seniors",
   },
@@ -72,29 +72,17 @@ export default function Work() {
       <section className={styles.intro}>
         <div className={styles.topRule}>
           <span>SELECTED WORK</span>
-          <span>ANNA ARNETT PHOTOGRAPHY · CHICAGO</span>
+          <span>ANNA ARNETT</span>
         </div>
 
         <div className={styles.introContent}>
           <div className={styles.introTitle}>
-            <p className={styles.kicker}>THE ARCHIVE</p>
 
             <h1>
-              text,
-              <br />
-              <em>text.</em>
+              Portfolio
             </h1>
           </div>
 
-          <div className={styles.introSide}>
-            <p>
-              text.
-            </p>
-
-            <p className={styles.services}>
-              Seniors · Portraits + Headshots · Creative Shoots · Select Events
-            </p>
-          </div>
         </div>
       </section>
 
@@ -107,7 +95,6 @@ export default function Work() {
           <span className={styles.categoryNumber}>01</span>
 
           <div>
-            <p>PORTRAITS</p>
             <h2>Seniors</h2>
           </div>
 
@@ -121,7 +108,6 @@ export default function Work() {
           <span className={styles.categoryNumber}>02</span>
 
           <div>
-            <p>PEOPLE</p>
             <h2>
               Portraits
               <br />+ Headshots
@@ -138,9 +124,8 @@ export default function Work() {
           <span className={styles.categoryNumber}>03</span>
 
           <div>
-            <p>EXPERIMENTS</p>
             <h2>
-              Creative
+              Misc.
               <br />
               Shoots
             </h2>
@@ -160,7 +145,7 @@ export default function Work() {
             <h2>
               Select
               <br />
-              Events
+              Events + Brands
             </h2>
           </div>
 
@@ -205,13 +190,7 @@ export default function Work() {
 
       {/* CTA */}
       <section className={styles.closing}>
-        <p className={styles.kicker}>HAVE SOMETHING IN MIND?</p>
-
-        <h2>
-          Let&apos;s make something
-          <br />
-          worth keeping.
-        </h2>
+        <p className={styles.kicker}>LET'S SHOOT!</p>
 
         <Link href="/inquire" className={styles.inquireLink}>
           INQUIRE →

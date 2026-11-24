@@ -17,35 +17,15 @@ export default function SeniorsPage() {
         </div>
 
         <div className={styles.masthead}>
-          <p className={styles.overline}>
-            SENIOR PORTRAITS · CHICAGO
-          </p>
 
-          <h1>The Yearbook</h1>
-
-          <p className={styles.subtitle}>
-            portraits from the in-between
-          </p>
-        </div>
-
-        <div className={styles.introBottom}>
-          <p>
-            A growing collection of people at the end of one thing
-            and the beginning of another.
-          </p>
-
-          <div className={styles.index}>
-            <span>ISSUE</span>
-            <strong>01</strong>
-          </div>
+          <h1>Seniors!</h1>
         </div>
       </section>
 
       {/* SHOOT INDEX */}
       <section className={styles.yearbook}>
         <div className={styles.sectionRule}>
-          <span>THE CLASS</span>
-          <span>{String(seniorShoots.length).padStart(2, "0")} SHOOTS</span>
+          <span>{String(seniorShoots.length)} SHOOTS</span>
         </div>
 
         <div className={styles.grid}>
@@ -69,7 +49,6 @@ export default function SeniorsPage() {
                       {String(index + 1).padStart(3, "0")}
                     </span>
 
-                    <span>THE YEARBOOK</span>
                   </div>
 
                   <div className={styles.overlayBottom}>
@@ -101,30 +80,10 @@ export default function SeniorsPage() {
         </div>
       </section>
 
-      {/* LITTLE YEARBOOK STRIP */}
-      <section className={styles.details}>
-        <div>
-          <span>LOCATION</span>
-          <p>Chicago + wherever the idea takes us</p>
-        </div>
-
-        <div>
-          <span>FOR</span>
-          <p>Seniors who want more than one stiff pose</p>
-        </div>
-
-        <div>
-          <span>ENERGY</span>
-          <p>Warm light, movement, personality, good clothes</p>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className={styles.cta}>
-        <p>WANT A PAGE IN THE YEARBOOK?</p>
-
         <h2>
-          Your turn.
+          Let's shoot!
         </h2>
 
         <Link href="/inquire">

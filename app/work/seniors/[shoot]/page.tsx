@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SeniorShootCarousel from "./SeniorShootCarousel";
 import styles from "./page.module.css";
 import { seniorShoots } from "../shoots";
 
@@ -54,7 +55,6 @@ export default async function SeniorShootPage({
 
         <div className={styles.heading}>
           <div>
-            <p>THE YEARBOOK</p>
             <h1>{shoot.name}</h1>
           </div>
 
@@ -93,29 +93,10 @@ export default async function SeniorShootPage({
 
       {/* SHOOT GALLERY */}
       <section className={styles.gallerySection}>
-        <div className={styles.galleryRule}>
-          <span>{shoot.name.toUpperCase()} / FULL SHOOT</span>
-
-          <span>
-            {String(shoot.photos.length).padStart(2, "0")} IMAGES
-          </span>
-        </div>
-
-        <div className={styles.gallery}>
-          {shoot.photos.map((photo, index) => (
-            <figure
-              className={styles.photo}
-              key={`${photo.src}-${index}`}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-          ))}
-        </div>
+        <SeniorShootCarousel
+          name={shoot.name}
+          photos={shoot.photos}
+        />
       </section>
 
       {/* PREVIOUS / NEXT */}

@@ -16,20 +16,15 @@ export default function InquirePage() {
       {/* INTRO */}
       <section className={styles.intro}>
         <div className={styles.introLeft}>
-          <p className={styles.kicker}>LET&apos;S MAKE SOMETHING</p>
-
           <h1>
-            Have an idea?
-            <br />
-            <em>I want to hear it.</em>
+            Inquire
           </h1>
         </div>
 
         <div className={styles.introRight}>
           <p>
-            Tell me what you&apos;re imagining — even if it&apos;s only half
-            formed. A location, an outfit, a Pinterest board, a graduation,
-            new headshots, or simply an excuse to make some good photos.
+            The sessions below are just an example of what a shoot could look like,
+            I'm happy to adjust or do something completely different, just reach out!
           </p>
 
           <p>
@@ -41,7 +36,7 @@ export default function InquirePage() {
       {/* SERVICES */}
       <section className={styles.services}>
         <div className={styles.servicesRule}>
-          <span>WHAT I SHOOT</span>
+          <span>RATES</span>
           <span>01—04</span>
         </div>
 
@@ -50,10 +45,9 @@ export default function InquirePage() {
             <span>01</span>
 
             <div>
-              <h2>Seniors</h2>
+              <h2>Senior/Grad Portraits · $150</h2>
               <p>
-                Relaxed, personality-first senior portraits with room to move,
-                explore, and try things.
+                60-75 min · Unlimited outfits · Unlimited locations · 30-45 edited photos
               </p>
             </div>
 
@@ -64,10 +58,9 @@ export default function InquirePage() {
             <span>02</span>
 
             <div>
-              <h2>Portraits + Headshots</h2>
+              <h2>Headshots · $50 </h2>
               <p>
-                Portraits that feel polished without losing the person in
-                them.
+                 20 min · Unlimited outfits · 10 edited photos
               </p>
             </div>
 
@@ -78,10 +71,9 @@ export default function InquirePage() {
             <span>03</span>
 
             <div>
-              <h2>Creative Shoots</h2>
+              <h2>Portraits · $100</h2>
               <p>
-                Strange shadows, movement, locations, concepts, experiments,
-                and ideas worth trying.
+                 60 min · Unlimited outfits · 20-30 edited photos
               </p>
             </div>
 
@@ -92,14 +84,13 @@ export default function InquirePage() {
             <span>04</span>
 
             <div>
-              <h2>Select Events</h2>
+              <h2>Couples · $100</h2>
               <p>
-                Small events and gatherings where candid, atmospheric
-                photography makes sense.
+                60 min · Unlimited outfits · 20-30 edited photos
               </p>
             </div>
 
-            <span className={styles.arrow}>✦</span>
+            <span className={styles.arrow}>→</span>
           </div>
         </div>
       </section>
@@ -111,30 +102,15 @@ export default function InquirePage() {
             <p className={styles.lightKicker}>START HERE</p>
 
             <h2>
-              Tell me a little
-              <br />
-              <em>about the idea.</em>
+              Tell me what your vision is!
             </h2>
 
             <p className={styles.inquiryCopy}>
-              You don&apos;t need to have every detail figured out. Give me
-              enough to understand what you&apos;re looking for, and we can
-              work out the rest.
+              No need to have all the details, a simple overview is good enough and we can figure out the rest.
             </p>
           </div>
 
           <div className={styles.goodToInclude}>
-            <span>GOOD THINGS TO INCLUDE</span>
-
-            <p>
-              what you&apos;re looking for
-              <br />
-              approximate date
-              <br />
-              location or neighborhood
-              <br />
-              any ideas or references
-            </p>
           </div>
         </div>
 
@@ -218,16 +194,16 @@ export default function InquirePage() {
             <textarea
               name="message"
               rows={7}
-              placeholder="What are you imagining?"
+              placeholder="What would your dream photos look like?"
             />
           </label>
 
           <label>
-            <span>HOW DID YOU FIND ME?</span>
+            <span>GENERAL BUDGET?</span>
             <input
               type="text"
               name="referral"
-              placeholder="Instagram, friend, Google..."
+              placeholder="Hoping to keep it under X amount..."
             />
           </label>
 

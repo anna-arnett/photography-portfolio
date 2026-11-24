@@ -169,17 +169,13 @@ export default function Home() {
           </h2>
 
           <p>
-            I graduated college in May, and I live in Chicago now! I'm still building up my portfolio and establishing myself as a photographer, so I'm super willing to accommodate all different kinds of photoshoots (and more importantly, it'll be cheap). Click below to learn more about who I am and what the process looks like for shooting with me!
+            I graduated college in May, and I live in Chicago now! I'm still building up my portfolio, so I'm super willing to accommodate all different kinds of photoshoots. Click below to learn more about who I am and what the process looks like for shooting with me!
           </p>
 
           <Link href="/about" className={styles.lightLink}>
             MORE ABOUT ME →
           </Link>
         </div>
-
-        <span className={styles.aboutStar} aria-hidden="true">
-          ✦
-        </span>
       </section>
 
       {/* CLOSING */}
@@ -196,13 +192,8 @@ export default function Home() {
         <div className={styles.closingOverlay} />
 
         <div className={styles.closingCopy}>
-          <p className={styles.lightKicker}>PORTRAITS · CHICAGO</p>
 
-          <h2>Have an idea?</h2>
-
-          <p className={styles.closingAccent}>
-            let&apos;s make something.
-          </p>
+          <h2>Let's work together!</h2>
 
           <Link href="/inquire" className={styles.lightLink}>
             GET IN TOUCH →

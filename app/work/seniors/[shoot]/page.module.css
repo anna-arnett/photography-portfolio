@@ -155,67 +155,9 @@
    ========================================================= */
 
 .gallerySection {
-  width: min(calc(100% - 4rem), 1180px);
+  width: min(calc(100% - 4rem), 1320px);
 
   margin: 0 auto;
-}
-
-.galleryRule {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 0;
-
-  display: flex;
-  justify-content: space-between;
-
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-
-  font-family: var(--font-sans), sans-serif;
-  font-size: 0.46rem;
-  letter-spacing: 0.15em;
-}
-
-
-/*
-  Natural-ratio gallery.
-
-  Nothing is cropped and nothing spans multiple columns.
-  Each photo uses its actual proportions.
-*/
-
-.gallery {
-  columns: 4;
-  column-gap: 0.45rem;
-}
-
-.photo {
-  width: 100%;
-
-  margin: 0 0 0.45rem;
-
-  display: block;
-
-  break-inside: avoid;
-
-  overflow: hidden;
-
-  background: #d7cebe;
-}
-
-.photo img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  transition:
-    transform 600ms ease,
-    filter 600ms ease;
-}
-
-.photo:hover img {
-  transform: scale(1.012);
-  filter: brightness(1.01);
 }
 
 
@@ -325,10 +267,6 @@
   .hero {
     width: min(42vw, 400px);
   }
-
-  .gallery {
-    columns: 3;
-  }
 }
 
 
@@ -370,16 +308,6 @@
 
   .gallerySection {
     width: calc(100% - 1rem);
-  }
-
-  .gallery {
-    columns: 2;
-
-    column-gap: 0.35rem;
-  }
-
-  .photo {
-    margin-bottom: 0.35rem;
   }
 
   .nextShoot {

@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+  z-index: 100;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -29,8 +32,14 @@
   color: var(--muted-ink);
 }
 
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
 .nav {
   display: flex;
+  align-items: center;
 
   gap: var(--space-md);
 
@@ -48,6 +57,139 @@
   opacity: 0.5;
 }
 
+
+/* =========================================================
+   WORK DROPDOWN
+   ========================================================= */
+
+.workMenu {
+  position: relative;
+}
+
+.workTrigger {
+  display: flex;
+  align-items: center;
+
+  gap: 0.35rem;
+}
+
+
+/* Small chevron */
+
+.dropdownToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1rem;
+  height: 1rem;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+  color: var(--muted-ink);
+
+  cursor: pointer;
+
+  transition: transform 200ms ease;
+}
+
+.toggleOpen {
+  transform: rotate(180deg);
+}
+
+
+/* Dropdown container */
+
+.dropdown {
+  position: absolute;
+  z-index: 110;
+
+  top: 100%;
+  left: -1rem;
+
+  min-width: 13rem;
+
+  padding-top: 0.75rem;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(-4px);
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+
+/* Dropdown panel */
+
+.dropdownInner {
+  padding: 0.45rem 0.9rem;
+
+  background: var(--paper);
+
+  border: 1px solid rgba(47, 42, 34, 0.22);
+
+  box-shadow: 0 5px 18px rgba(47, 42, 34, 0.06);
+}
+
+.dropdownInner a {
+  display: block;
+
+  padding: 0.85rem 0.15rem;
+
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+
+  letter-spacing: 0.11em;
+
+  white-space: nowrap;
+
+  transition:
+    color 180ms ease,
+    padding-left 180ms ease;
+}
+
+.dropdownInner a + a {
+  border-top: 1px solid rgba(47, 42, 34, 0.15);
+}
+
+.dropdownInner a:hover {
+  padding-left: 0.35rem;
+
+  color: var(--moss);
+  opacity: 1;
+}
+
+
+/* Keyboard accessibility */
+
+.dropdownToggle:focus-visible,
+.dropdownInner a:focus-visible {
+  outline: 1px solid var(--moss);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
@@ -61,5 +203,30 @@
     width: 100%;
 
     justify-content: space-between;
+  }
+
+  .dropdown {
+    left: 0;
+
+    min-width: 12rem;
+  }
+
+  .dropdownToggle {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .dropdownInner a {
+    padding: 1rem 0.15rem;
+
+    font-size: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown,
+  .dropdownToggle,
+  .dropdownInner a {
+    transition: none;
   }
 }
