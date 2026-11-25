@@ -7,6 +7,7 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import Link from "next/link";
+import Script from "next/script";
 import Header from "@/components/Header";
 import "./globals.css";
 
@@ -106,6 +107,12 @@ export default function RootLayout({
             Privacy Policy
           </Link>
         </footer>
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          type="module"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token":"eb443dddcb31452caf1014590a06ac69"}'
+        />
       </body>
     </html>
   );

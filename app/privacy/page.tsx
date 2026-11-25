@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           <h1>Privacy Policy</h1>
 
           <p className={styles.updated}>
-            Last updated November 24, 2026
+            Last updated November 25, 2026
           </p>
         </header>
 
@@ -88,11 +88,25 @@ export default function PrivacyPage() {
 
             <p>
               This website relies on third-party
-              providers to deliver email, host the
-              website, and maintain security.
+              providers for hosting, email delivery,
+              security, and website analytics.
             </p>
 
             <ul>
+              <li>
+                <a
+                  href="https://www.netlify.com/privacy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Netlify
+                </a>
+                {" — "}
+                hosts the website and processes
+                technical information necessary
+                to deliver and operate it.
+              </li>
+
               <li>
                 <a
                   href="https://resend.com/legal/privacy-policy"
@@ -114,7 +128,9 @@ export default function PrivacyPage() {
                   Cloudflare
                 </a>
                 {" — "}
-                helps prevent spam and automated abuse.
+                provides Turnstile to help prevent spam
+                and automated abuse, as well as
+                privacy-focused website analytics.
               </li>
 
               <li>
@@ -142,14 +158,23 @@ export default function PrivacyPage() {
             <h2>Website analytics</h2>
 
             <p>
-              This website may use privacy-focused
-              analytics to understand website traffic
-              and performance. These insights help
-              improve the website and understand
-              which pages visitors find useful.
+              This website uses Cloudflare Web
+              Analytics to understand website traffic
+              and performance, including page visits,
+              referral sources, browser and device
+              information, and approximate geographic
+              information.
+
+              These insights help improve the website
+              and understand which pages visitors
+              find useful.
             </p>
 
             <p>
+              Cloudflare Web Analytics does not
+              rely on cookies or local storage to
+              track individual visitors.
+
               I do not use advertising trackers or
               analytics designed to build individual
               advertising profiles.
@@ -202,7 +227,11 @@ export default function PrivacyPage() {
             <p>
               If you have questions about this policy
               or how your information is handled,
-              please reach out through my{" "}
+              please contact me at{" "}
+              <a href="mailto:annaarnettphoto@gmail.com">
+                annaarnettphoto@gmail.com
+              </a>
+              {" "}or through my{" "}
               <Link href="/inquire">
                 inquiry page
               </Link>.
