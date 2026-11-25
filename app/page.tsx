@@ -12,7 +12,8 @@ export default function Home() {
             src="/photos/converse.jpg"
             alt="Waves breaking around Converse shoes in warm evening light"
             fill
-            priority
+            loading="eager"
+            fetchPriority="high"
             sizes="100vw"
           />
         </div>
