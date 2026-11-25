@@ -1,3 +1,4 @@
+import PhotographyStructuredData from "./PhotographyStructuredData";
 
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={styles.home}>
+      <PhotographyStructuredData />
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroMedia}>

@@ -1,8 +1,43 @@
+import type { Metadata } from "next";
+import {
+  createPageMetadata,
+  isIndexablePortrait,
+} from "../../../seo";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { portraitShoots } from "../shoots";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ shoot: string }>;
+}): Promise<Metadata> {
+  const { shoot: slug } = await params;
+
+  const shoot = portraitShoots.find(
+    (item) => item.slug === slug
+  );
+
+  if (!shoot) {
+    notFound();
+  }
+
+  return createPageMetadata({
+    title:
+      `${shoot.name} - ${shoot.type} Photography in ` +
+      shoot.location,
+    description:
+      `Explore the ${shoot.name} photography session ` +
+      `in ${shoot.location}, photographed by Anna Arnett ` +
+      `in ${shoot.date}.`,
+    path: `/work/portraits/${shoot.slug}`,
+    image: shoot.cover,
+    imageAlt: `${shoot.name} - ${shoot.type}`,
+    index: isIndexablePortrait(shoot),
+  });
+}
 
 export function generateStaticParams() {
   return portraitShoots.map((shoot) => ({
