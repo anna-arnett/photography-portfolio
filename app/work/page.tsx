@@ -34,28 +34,28 @@ export const metadata: Metadata = {
 const archivePhotos = [
   {
     src: "/photos/place-room.jpg",
-    alt: "Senior portrait among wildflowers",
-    href: "/work/seniors",
+    alt: "Warm creative portrait",
+    href: "/work/portraits",
   },
   {
     src: "/photos/marlokate2.JPG",
-    alt: "Portrait in warm field light",
-    href: "/work/seniors",
+    alt: "Couples portrait in warm field light",
+    href: "/work/portraits",
   },
   {
     src: "/photos/strike2.JPG",
-    alt: "Creative portrait with patterned shadow",
+    alt: "Creative portrait",
     href: "/work/creative",
   },
   {
     src: "/photos/mary.jpg",
     alt: "Warm outdoor portrait",
-    href: "/work/portraits",
+    href: "/work/seniors",
   },
   {
     src: "/photos/teresa.jpg",
-    alt: "Waves splashing around Converse shoes",
-    href: "/work/creative",
+    alt: "Warm fall portrait",
+    href: "/work/seniors",
   },
   {
     src: "/photos/motion-laugh.JPG",
@@ -64,28 +64,28 @@ const archivePhotos = [
   },
   {
     src: "/photos/motion-dance.jpg",
-    alt: "Chicago train framed by foliage and architecture",
-    href: "/work/creative",
+    alt: "Portrait of a dancer in the snow",
+    href: "/work/portraits",
   },
   {
     src: "/photos/shadow.jpg",
-    alt: "Creative portrait in natural light",
-    href: "/work/portraits",
+    alt: "Creative portrait with unique shadow",
+    href: "/work/creative",
   },
   {
     src: "/photos/cooljake.jpg",
     alt: "Candid laughing portrait",
-    href: "/work/portraits",
+    href: "/work/seniors",
   },
   {
     src: "/photos/lydia-stair.jpg",
-    alt: "Black and white figure in the water",
-    href: "/work/creative",
+    alt: "Portrait of a girl walking up stairs",
+    href: "/work/seniors",
   },
   {
     src: "/photos/regan.JPG",
-    alt: "Experimental portrait in snow",
-    href: "/work/creative",
+    alt: "Rich, colorful senior photo",
+    href: "/work/seniors",
   },
   {
     src: "/photos/ava3.jpg",

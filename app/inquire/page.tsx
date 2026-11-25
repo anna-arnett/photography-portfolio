@@ -5,7 +5,7 @@ import InquiryForm from "./InquiryForm";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Chicago Photography Pricing & Booking",
+  title: "Pricing & Booking",
 
   description:
     "Affordable Chicago photography: headshots from $50, portraits and couples sessions from $100, and senior portraits from $150. Inquire about your session.",

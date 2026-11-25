@@ -6,42 +6,42 @@ import styles from "./page.module.css";
 const moreFieldNotes = [
   {
     src: "/photos/misc/01.jpg",
-    alt: "Experimental photograph taken around a train",
+    alt: "Experimental photograph of a soapy hand",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/12.jpg",
-    alt: "Chicago",
+    alt: "Chicago red line",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/10.jpg",
-    alt: "Chicago",
+    alt: "Moon seen through flowers",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/03.jpg",
-    alt: "Creative portrait in natural light",
+    alt: "Reflection of white flowers",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/04.jpg",
-    alt: "Creative portrait in natural light",
+    alt: "Portrait of two friends",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/05.JPG",
-    alt: "Creative portrait in natural light",
+    alt: "Victorious portrait of a winner",
     ratio: "landscape" as const,
   },
   {
     src: "/photos/misc/07.jpg",
-    alt: "Creative portrait in natural light",
+    alt: "Hands holding a bouquet of flowers",
     ratio: "portrait" as const,
   },
   {
     src: "/photos/misc/13.JPG",
-    alt: "Creative portrait in natural light",
+    alt: "Chicago Red Line",
     ratio: "landscape" as const,
   },
 

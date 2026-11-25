@@ -10,7 +10,7 @@ export type WorkPhoto = {
       number: "01",
       title: "Senior portraits",
       intro:
-        "Warm, relaxed portraits with room to move around, try things, and actually have fun with it.",
+        "Warm, nostalgic senior portraits that bring out the best in you.",
       photos: [
         {
           src: "/photos/lydiasenior.JPG",
@@ -45,7 +45,7 @@ export type WorkPhoto = {
       number: "02",
       title: "Portraits + headshots",
       intro:
-        "Natural portraits, headshots, and photos that feel polished without feeling overly posed.",
+        "Natural portraits & headshots.",
       photos: [
         {
           src: "/photos/mary.jpg",
@@ -85,7 +85,7 @@ export type WorkPhoto = {
       number: "03",
       title: "Creative shoots",
       intro:
-        "Movement, reflections, unusual framing, shadows, blur, and whatever idea seems interesting enough to try.",
+        "For fun!",
       photos: [
         {
           src: "/photos/shadow.jpg",
@@ -94,7 +94,7 @@ export type WorkPhoto = {
         },
         {
           src: "/photos/motion-dance.jpg",
-          alt: "Experimental black and white portrait",
+          alt: "Dancer in the snow",
           shape: "portrait",
         },
         {

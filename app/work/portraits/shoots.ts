@@ -196,7 +196,7 @@ export type PortraitShoot = {
       photos: [
         {
           src: "/photos/portraits/headshots/cooper.JPG",
-          alt: "Portrait of Ava in soft natural light",
+          alt: "Portrait of Cooper in soft natural light",
         },
       ],
     },
@@ -211,7 +211,7 @@ export type PortraitShoot = {
       photos: [
         {
           src: "/photos/portraits/headshots/julia.JPG",
-          alt: "Portrait of Ava in soft natural light",
+          alt: "Portrait of Julia in soft natural light",
         },
       ],
     },
@@ -226,7 +226,7 @@ export type PortraitShoot = {
       photos: [
         {
           src: "/photos/portraits/headshots/mary.JPG",
-          alt: "Portrait of Ava in soft natural light",
+          alt: "Portrait of Mary in soft natural light",
         },
       ],
     },
@@ -241,7 +241,7 @@ export type PortraitShoot = {
       photos: [
         {
           src: "/photos/portraits/headshots/kaleigh.jpg",
-          alt: "Portrait of Ava in soft natural light",
+          alt: "Portrait of Kaleigh in soft natural light",
         },
       ],
     },
@@ -256,7 +256,7 @@ export type PortraitShoot = {
       photos: [
         {
           src: "/photos/portraits/headshots/jake.jpg",
-          alt: "Portrait of Ava in soft natural light",
+          alt: "Portrait of Jake in soft natural light",
         },
       ],
     },
@@ -328,19 +328,19 @@ export type PortraitShoot = {
         },
         {
           src: "/photos/portraits/sarahartsy/02.jpg",
-          alt: "Dance portrait",
+          alt: "Creative portrait",
         },
         {
           src: "/photos/portraits/sarahartsy/03.jpg",
-          alt: "Dance portrait",
+          alt: "Creative portrait",
         },
         {
           src: "/photos/portraits/sarahartsy/04.JPG",
-          alt: "Dance portrait",
+          alt: "Creative portrait",
         },
         {
           src: "/photos/portraits/sarahartsy/05.JPG",
-          alt: "Dance portrait",
+          alt: "Creative portrait",
         },
       ],
     },

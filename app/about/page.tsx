@@ -4,10 +4,10 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Meet Your Chicago Photographer",
+  title: "About",
 
   description:
-    "Meet Anna Arnett, a Chicago portrait and editorial photographer. Learn about my photography style and relaxed, collaborative approach to photo sessions.",
+    "Chicago portrait and editorial photographer: Learn about my photography style and relaxed, collaborative approach to photo sessions.",
 
   alternates: {
     canonical: "/about",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     siteName: "Anna Arnett Photography",
     locale: "en_US",
     url: "/about",
-    title: "Meet Anna | Anna Arnett Photography",
+    title: "About | Anna Arnett Photography",
     description:
-      "Get to know your Chicago photographer and learn what a photography session with Anna looks like.",
+      "Get to know me and learn what a photography session with me looks like.",
     images: [
       {
         url: "/photos/senior_headshot4.JPG",

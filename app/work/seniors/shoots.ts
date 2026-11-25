@@ -403,67 +403,67 @@ export type SeniorShoot = {
         photos: [
           {
             src: "/photos/seniors/jake/01.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/02.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/03.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/04.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/05.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/06.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/07.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/08.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/09.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/10.JPG",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/11.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/12.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
           {
             src: "/photos/seniors/jake/13.jpg",
-            alt: "Sarah senior photo",
+            alt: "Jake senior photo",
             orientation: "portrait",
           },
         ]
@@ -548,62 +548,62 @@ export type SeniorShoot = {
       photos: [
         {
           src: "/photos/seniors/lauren/01.jpg",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/02.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/03.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/04.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/05.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/06.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/07.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/08.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/09.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/10.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/11.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/lauren/12.JPG",
-          alt: "Regan portrait in warm field light",
+          alt: "Lauren portrait in warm field light",
           orientation: "portrait",
         },
       ]
@@ -693,32 +693,32 @@ export type SeniorShoot = {
       photos: [
         {
           src: "/photos/seniors/teresa/01.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/teresa/02.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/teresa/03.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/teresa/04.JPG",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/teresa/05.JPG",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/teresa/06.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Teresa portrait in warm natural light",
           orientation: "portrait",
         },
       ]
@@ -733,37 +733,37 @@ export type SeniorShoot = {
       photos: [
         {
           src: "/photos/seniors/sam/01.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/02.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/03.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/04.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/05.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/06.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
         {
           src: "/photos/seniors/sam/07.jpg",
-          alt: "Mary portrait in warm natural light",
+          alt: "Sam portrait in warm natural light",
           orientation: "portrait",
         },
       ]
