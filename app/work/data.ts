@@ -18,7 +18,7 @@ export type WorkPhoto = {
           shape: "portrait",
         },
         {
-          src: "/photos/regan.jpg",
+          src: "/photos/regan.JPG",
           alt: "Senior portrait in a grassy field",
           shape: "portrait",
         },
@@ -33,7 +33,7 @@ export type WorkPhoto = {
           shape: "portrait",
         },
         {
-          src: "/photos/ava.jpg",
+          src: "/photos/ava.JPG",
           alt: "Portrait in soft natural light",
           shape: "portrait",
         },
@@ -53,7 +53,7 @@ export type WorkPhoto = {
           shape: "portrait",
         },
         {
-          src: "/photos/regan.jpg",
+          src: "/photos/regan.JPG",
           alt: "Outdoor portrait",
           shape: "portrait",
         },
@@ -63,7 +63,7 @@ export type WorkPhoto = {
           shape: "portrait",
         },
         {
-          src: "/photos/ava.jpg",
+          src: "/photos/ava.JPG",
           alt: "Portrait in soft light",
           shape: "portrait",
         },
@@ -98,7 +98,7 @@ export type WorkPhoto = {
           shape: "portrait",
         },
         {
-          src: "/photos/strike2.jpg",
+          src: "/photos/strike2.JPG",
           alt: "Black and white figure in water",
           shape: "wide",
         },

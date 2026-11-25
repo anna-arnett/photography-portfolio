@@ -9,12 +9,12 @@ const archivePhotos = [
     href: "/work/seniors",
   },
   {
-    src: "/photos/marlokate2.jpg",
+    src: "/photos/marlokate2.JPG",
     alt: "Portrait in warm field light",
     href: "/work/seniors",
   },
   {
-    src: "/photos/strike2.jpg",
+    src: "/photos/strike2.JPG",
     alt: "Creative portrait with patterned shadow",
     href: "/work/creative",
   },
@@ -29,7 +29,7 @@ const archivePhotos = [
     href: "/work/creative",
   },
   {
-    src: "/photos/motion-laugh.jpg",
+    src: "/photos/motion-laugh.JPG",
     alt: "Portrait in soft natural light",
     href: "/work/portraits",
   },
@@ -54,7 +54,7 @@ const archivePhotos = [
     href: "/work/creative",
   },
   {
-    src: "/photos/regan.jpg",
+    src: "/photos/regan.JPG",
     alt: "Experimental portrait in snow",
     href: "/work/creative",
   },

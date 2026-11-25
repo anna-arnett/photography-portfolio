@@ -29,7 +29,7 @@ const moreFieldNotes = [
     ratio: "portrait" as const,
   },
   {
-    src: "/photos/misc/05.jpg",
+    src: "/photos/misc/05.JPG",
     alt: "Creative portrait in natural light",
     ratio: "landscape" as const,
   },
@@ -39,7 +39,7 @@ const moreFieldNotes = [
     ratio: "portrait" as const,
   },
   {
-    src: "/photos/misc/13.jpg",
+    src: "/photos/misc/13.JPG",
     alt: "Creative portrait in natural light",
     ratio: "landscape" as const,
   },
@@ -67,7 +67,7 @@ export default function CreativePage() {
         <div className={styles.heroComposition}>
           <figure className={`${styles.heroPhoto} ${styles.heroPhotoOne}`}>
             <img
-              src="/photos/misc/16.jpg"
+              src="/photos/misc/16.JPG"
               alt="Portrait exploring movement"
             />
           </figure>

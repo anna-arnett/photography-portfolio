@@ -25,7 +25,7 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/02.jpg",
+          src: "/photos/portraits/marlokate/02.JPG",
           alt: "Portrait",
         },
         {
@@ -37,7 +37,7 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/05.jpg",
+          src: "/photos/portraits/marlokate/05.JPG",
           alt: "Portrait",
         },
         {
@@ -65,15 +65,15 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/13.jpg",
+          src: "/photos/portraits/marlokate/13.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/14.jpg",
+          src: "/photos/portraits/marlokate/14.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/15.jpg",
+          src: "/photos/portraits/marlokate/15.JPG",
           alt: "Portrait",
         },
         {
@@ -81,23 +81,23 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/17.jpg",
+          src: "/photos/portraits/marlokate/17.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/18.jpg",
+          src: "/photos/portraits/marlokate/18.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/19.jpg",
+          src: "/photos/portraits/marlokate/19.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/20.jpg",
+          src: "/photos/portraits/marlokate/20.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/21.jpg",
+          src: "/photos/portraits/marlokate/21.JPG",
           alt: "Portrait",
         },
         {
@@ -105,23 +105,23 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/23.jpg",
+          src: "/photos/portraits/marlokate/23.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/24.jpg",
+          src: "/photos/portraits/marlokate/24.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/25.jpg",
+          src: "/photos/portraits/marlokate/25.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/26.jpg",
+          src: "/photos/portraits/marlokate/26.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/27.jpg",
+          src: "/photos/portraits/marlokate/27.JPG",
           alt: "Portrait",
         },
         {
@@ -133,11 +133,11 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/30.jpg",
+          src: "/photos/portraits/marlokate/30.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/marlokate/31.jpg",
+          src: "/photos/portraits/marlokate/31.JPG",
           alt: "Portrait",
         },
       ],
@@ -149,14 +149,14 @@ export type PortraitShoot = {
       type: "Portrait",
       date: "2026",
       location: "Cedarburg, WI",
-      cover: "/photos/portraits/sarahbath/02.jpg",
+      cover: "/photos/portraits/sarahbath/02.JPG",
       photos: [
         {
-          src: "/photos/portraits/sarahbath/01.jpg",
+          src: "/photos/portraits/sarahbath/01.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/sarahbath/02.jpg",
+          src: "/photos/portraits/sarahbath/02.JPG",
           alt: "Portrait",
         },
         {
@@ -172,11 +172,11 @@ export type PortraitShoot = {
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/sarahbath/06.jpg",
+          src: "/photos/portraits/sarahbath/06.JPG",
           alt: "Portrait",
         },
         {
-          src: "/photos/portraits/sarahbath/07.jpg",
+          src: "/photos/portraits/sarahbath/07.JPG",
           alt: "Portrait",
         },
         {
@@ -192,10 +192,10 @@ export type PortraitShoot = {
       type: "Headshot",
       date: "2024",
       location: "Cedarburg, WI",
-      cover: "/photos/portraits/headshots/cooper.jpg",
+      cover: "/photos/portraits/headshots/cooper.JPG",
       photos: [
         {
-          src: "/photos/portraits/headshots/cooper.jpg",
+          src: "/photos/portraits/headshots/cooper.JPG",
           alt: "Portrait of Ava in soft natural light",
         },
       ],
@@ -207,10 +207,10 @@ export type PortraitShoot = {
       type: "Headshot",
       date: "2024",
       location: "Notre Dame, IN",
-      cover: "/photos/portraits/headshots/julia.jpg",
+      cover: "/photos/portraits/headshots/julia.JPG",
       photos: [
         {
-          src: "/photos/portraits/headshots/julia.jpg",
+          src: "/photos/portraits/headshots/julia.JPG",
           alt: "Portrait of Ava in soft natural light",
         },
       ],
@@ -222,10 +222,10 @@ export type PortraitShoot = {
       type: "Headshot",
       date: "2024",
       location: "Cedarburg, WI",
-      cover: "/photos/portraits/headshots/mary.jpg",
+      cover: "/photos/portraits/headshots/mary.JPG",
       photos: [
         {
-          src: "/photos/portraits/headshots/mary.jpg",
+          src: "/photos/portraits/headshots/mary.JPG",
           alt: "Portrait of Ava in soft natural light",
         },
       ],
@@ -267,26 +267,26 @@ export type PortraitShoot = {
       type: "Creative Portrait",
       date: "2023",
       location: "Notre Dame, IN",
-      cover: "/photos/portraits/strike/18.jpg",
+      cover: "/photos/portraits/strike/18.JPG",
       photos: [
         {
-          src: "/photos/portraits/strike/18.jpg",
+          src: "/photos/portraits/strike/18.JPG",
           alt: "Creative portrait",
         },
         {
-          src: "/photos/portraits/strike/14.jpg",
+          src: "/photos/portraits/strike/14.JPG",
           alt: "Creative portrait",
         },
         {
-          src: "/photos/portraits/strike/15.jpg",
+          src: "/photos/portraits/strike/15.JPG",
           alt: "Creative portrait",
         },
         {
-          src: "/photos/portraits/strike/16.jpg",
+          src: "/photos/portraits/strike/16.JPG",
           alt: "Creative portrait",
         },
         {
-          src: "/photos/portraits/strike/17.jpg",
+          src: "/photos/portraits/strike/17.JPG",
           alt: "Creative portrait",
         },
       ],
@@ -335,11 +335,11 @@ export type PortraitShoot = {
           alt: "Dance portrait",
         },
         {
-          src: "/photos/portraits/sarahartsy/04.jpg",
+          src: "/photos/portraits/sarahartsy/04.JPG",
           alt: "Dance portrait",
         },
         {
-          src: "/photos/portraits/sarahartsy/05.jpg",
+          src: "/photos/portraits/sarahartsy/05.JPG",
           alt: "Dance portrait",
         },
       ],
