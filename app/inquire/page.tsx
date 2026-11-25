@@ -72,60 +72,48 @@ export default function InquirePage() {
         </div>
 
         <div className={styles.serviceGrid}>
-          <Link
-            href="/work/seniors"
-            className={styles.service}
-          >
+          <div className={styles.service}>
             <span>01</span>
 
             <div>
               <h2>Senior/Grad Portraits · $150</h2>
 
               <p>
-                60-75 min · Unlimited outfits ·
-                Unlimited locations · 30-45 edited
+                60-75 min<br/>Unlimited outfits<br/>
+                Unlimited locations<br/>30-45 edited
                 photos
               </p>
             </div>
 
-            <span className={styles.arrow}>→</span>
-          </Link>
+          </div>
 
-          <Link
-            href="/work/portraits"
-            className={styles.service}
-          >
+          <div className={styles.service}>
             <span>02</span>
 
             <div>
               <h2>Headshots · $50</h2>
 
               <p>
-                20 min · Unlimited outfits · 10 edited
+                20 min<br/>Unlimited outfits<br/>10 edited
                 photos
               </p>
             </div>
 
-            <span className={styles.arrow}>→</span>
-          </Link>
+          </div>
 
-          <Link
-            href="/work/creative"
-            className={styles.service}
-          >
+          <div className={styles.service}>
             <span>03</span>
 
             <div>
               <h2>Portraits · $100</h2>
 
               <p>
-                60 min · Unlimited outfits · 20-30
+                60 min<br/>Unlimited outfits<br/>20-30
                 edited photos
               </p>
             </div>
 
-            <span className={styles.arrow}>→</span>
-          </Link>
+          </div>
 
           <div className={styles.service}>
             <span>04</span>
@@ -134,12 +122,11 @@ export default function InquirePage() {
               <h2>Couples · $100</h2>
 
               <p>
-                60 min · Unlimited outfits · 20-30
+                60 min<br/>Unlimited outfits<br/>20-30
                 edited photos
               </p>
             </div>
 
-            <span className={styles.arrow}>→</span>
           </div>
         </div>
       </section>

@@ -74,7 +74,7 @@ export default async function SeniorShootPage({
       <section className={styles.intro}>
         <div className={styles.rule}>
           <Link href="/work/seniors">
-            ← THE YEARBOOK
+            ← SENIORS
           </Link>
 
           <span>
