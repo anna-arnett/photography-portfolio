@@ -1,6 +1,35 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import InquiryForm from "./InquiryForm";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Chicago Photography Pricing & Booking",
+
+  description:
+    "Affordable Chicago photography: headshots from $50, portraits and couples sessions from $100, and senior portraits from $150. Inquire about your session.",
+
+  alternates: {
+    canonical: "/inquire",
+  },
+
+  openGraph: {
+    type: "website",
+    siteName: "Anna Arnett Photography",
+    locale: "en_US",
+    url: "/inquire",
+    title: "Photography Sessions & Pricing | Anna Arnett Photography",
+    description:
+      "Explore affordable Chicago photography sessions, including headshots, senior portraits, couples and creative shoots. Let's plan your session.",
+    images: [
+      {
+        url: "/photos/lydiasenior.JPG",
+        alt: "Warm outdoor senior portrait",
+      },
+    ],
+  },
+};
 
 export default function InquirePage() {
   return (

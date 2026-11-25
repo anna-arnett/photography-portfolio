@@ -1,6 +1,39 @@
+
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Chicago Portrait & Headshot Photographer | Anna Arnett Photography",
+  },
+
+  description:
+    "Affordable portrait, senior, graduation, headshot and creative photography in Chicago. Warm, nostalgic images with an editorial approach.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Anna Arnett Photography",
+    url: "/",
+    title:
+      "Chicago Portrait & Headshot Photographer | Anna Arnett Photography",
+    description:
+      "Warm, nostalgic portraits with an editorial approach. Chicago photography for seniors, headshots, couples and creative projects.",
+    images: [
+      {
+        url: "/photos/converse.jpg",
+        alt: "Waves breaking around Converse shoes in warm evening light",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
@@ -60,7 +93,6 @@ export default function Home() {
         </figure>
 
         <div className={styles.introCopy}>
-
           <p className={styles.italicIntro}>My work</p>
 
           <h2>
@@ -68,10 +100,17 @@ export default function Home() {
           </h2>
 
           <p className={styles.bodyCopy}>
-            I love to take photos! In my work, I take a more editorial approach to traditional portraits, encorporating unique light, shadows, and setting into each shot. 
-            <br/>
-            <br/>
-            My goal in every shoot is to bring a vision to life. Whether that's a straightforward headshot or a creative artistic project, I'd be so excited to help you plan out the concept you're looking for. 
+            I love to take photos! In my work, I take a
+            more editorial approach to traditional
+            portraits, incorporating unique light,
+            shadows, and setting into each shot.
+            <br />
+            <br />
+            My goal in every shoot is to bring a vision
+            to life. Whether that&apos;s a straightforward
+            headshot or a creative artistic project,
+            I&apos;d be so excited to help you plan out
+            the concept you&apos;re looking for.
           </p>
 
           <Link href="/work" className={styles.textLink}>
@@ -87,7 +126,6 @@ export default function Home() {
             sizes="(max-width: 800px) 65vw, 22vw"
           />
         </figure>
-
       </section>
 
       {/* PORTRAIT REEL */}
@@ -165,12 +203,16 @@ export default function Home() {
         <div className={styles.aboutFeatureCopy}>
           <p className={styles.lightKicker}>ABOUT ME</p>
 
-          <h2>
-            Hi, I&apos;m Anna!
-          </h2>
+          <h2>Hi, I&apos;m Anna!</h2>
 
           <p>
-            I graduated college in May, and I live in Chicago now! I'm still building up my portfolio, so I'm super willing to accommodate all different kinds of photoshoots. Click below to learn more about who I am and what the process looks like for shooting with me!
+            I graduated college in May, and I live in
+            Chicago now! I&apos;m still building up my
+            portfolio, so I&apos;m super willing to
+            accommodate all different kinds of
+            photoshoots. Click below to learn more about
+            who I am and what the process looks like for
+            shooting with me!
           </p>
 
           <Link href="/about" className={styles.lightLink}>
@@ -193,8 +235,7 @@ export default function Home() {
         <div className={styles.closingOverlay} />
 
         <div className={styles.closingCopy}>
-
-          <h2>Let's work together!</h2>
+          <h2>Let&apos;s work together!</h2>
 
           <Link href="/inquire" className={styles.lightLink}>
             GET IN TOUCH →

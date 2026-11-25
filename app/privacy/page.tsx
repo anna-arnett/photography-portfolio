@@ -3,9 +3,13 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Anna Arnett Photography",
+  title: "Privacy Policy",
   description:
     "Learn how Anna Arnett Photography collects, uses, and protects your personal information.",
+
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

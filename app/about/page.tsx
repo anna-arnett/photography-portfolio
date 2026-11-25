@@ -1,5 +1,34 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Meet Your Chicago Photographer",
+
+  description:
+    "Meet Anna Arnett, a Chicago portrait and editorial photographer. Learn about my photography style and relaxed, collaborative approach to photo sessions.",
+
+  alternates: {
+    canonical: "/about",
+  },
+
+  openGraph: {
+    type: "website",
+    siteName: "Anna Arnett Photography",
+    locale: "en_US",
+    url: "/about",
+    title: "Meet Anna | Anna Arnett Photography",
+    description:
+      "Get to know your Chicago photographer and learn what a photography session with Anna looks like.",
+    images: [
+      {
+        url: "/photos/senior_headshot4.JPG",
+        alt: "Anna Arnett, Chicago photographer",
+      },
+    ],
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -61,9 +90,7 @@ export default function AboutPage() {
       <section className={styles.process}>
         <div className={styles.processHeader}>
           <div>
-            <h2>
-              My process:
-            </h2>
+            <h2>My process:</h2>
           </div>
         </div>
 
@@ -74,9 +101,9 @@ export default function AboutPage() {
             <h3>Before</h3>
 
             <p>
-              We&apos;ll talk through the location and the vibe you're
-              looking for; send any inspiration pics/mood boards/ideas 
-              you have! 
+              We&apos;ll talk through the location and the vibe you&apos;re
+              looking for; send any inspiration pics/mood boards/ideas
+              you have!
             </p>
           </article>
 
@@ -86,12 +113,12 @@ export default function AboutPage() {
             <h3>During</h3>
 
             <p>
-              Feel free to bring as many outfit changes as you want to, 
-              and friends + family are 
-              also super welcome. You can look at the pictures as we go so 
-              you know how they're turning out. And don't worry about 
-              feeling awkward in front of the camera or knowing how to  pose,
-              I'll guide you through everything!
+              Feel free to bring as many outfit changes as you want to,
+              and friends + family are
+              also super welcome. You can look at the pictures as we go so
+              you know how they&apos;re turning out. And don&apos;t worry about
+              feeling awkward in front of the camera or knowing how to pose,
+              I&apos;ll guide you through everything!
             </p>
           </article>
 
@@ -101,9 +128,9 @@ export default function AboutPage() {
             <h3>After</h3>
 
             <p>
-              Basically, the photos are yours! I'll send you a curated collection of
+              Basically, the photos are yours! I&apos;ll send you a curated collection of
               edited images within two weeks of your shoot that you can download, post,
-              and print. 
+              and print.
             </p>
           </article>
         </div>

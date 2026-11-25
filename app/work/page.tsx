@@ -1,6 +1,35 @@
+
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Chicago Photography Portfolio",
+
+  description:
+    "Explore senior portraits, graduation photos, headshots, creative portraits and editorial photography by Chicago photographer Anna Arnett.",
+
+  alternates: {
+    canonical: "/work",
+  },
+
+  openGraph: {
+    type: "website",
+    siteName: "Anna Arnett Photography",
+    locale: "en_US",
+    url: "/work",
+    title: "Selected Work | Anna Arnett Photography",
+    description:
+      "A collection of portraits, senior photography, headshots and experimental editorial work by Chicago photographer Anna Arnett.",
+    images: [
+      {
+        url: "/photos/marlokate2.JPG",
+        alt: "Portrait in warm field light",
+      },
+    ],
+  },
+};
 
 const archivePhotos = [
   {
@@ -77,12 +106,8 @@ export default function Work() {
 
         <div className={styles.introContent}>
           <div className={styles.introTitle}>
-
-            <h1>
-              Portfolio
-            </h1>
+            <h1>Portfolio</h1>
           </div>
-
         </div>
       </section>
 
@@ -190,7 +215,7 @@ export default function Work() {
 
       {/* CTA */}
       <section className={styles.closing}>
-        <p className={styles.kicker}>LET'S SHOOT!</p>
+        <p className={styles.kicker}>LET&apos;S SHOOT!</p>
 
         <Link href="/inquire" className={styles.inquireLink}>
           INQUIRE →

@@ -1,9 +1,11 @@
+
 import type { Metadata } from "next";
 import {
   Geist,
   Newsreader,
   Cormorant_Garamond,
 } from "next/font/google";
+import Link from "next/link";
 import Header from "@/components/Header";
 import "./globals.css";
 
@@ -26,9 +28,53 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Anna Arnett Photography",
+  metadataBase: new URL("https://annaarnett.photo"),
+
+  title: {
+    default:
+      "Chicago Portrait & Headshot Photographer | Anna Arnett Photography",
+    template: "%s | Anna Arnett Photography",
+  },
+
   description:
-    "Chicago-based portrait and editorial photography by Anna Arnett.",
+    "Affordable portrait, senior, graduation, headshot and creative photography in Chicago. Warm, nostalgic images with an editorial approach.",
+
+  applicationName: "Anna Arnett Photography",
+
+  authors: [{ name: "Anna Arnett" }],
+
+  creator: "Anna Arnett",
+
+  publisher: "Anna Arnett Photography",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Anna Arnett Photography",
+    title:
+      "Chicago Portrait & Headshot Photographer | Anna Arnett Photography",
+    description:
+      "Warm, nostalgic portrait and editorial photography in Chicago. Available for seniors, graduation, headshots, couples and creative sessions.",
+    images: [
+      {
+        url: "/photos/converse.jpg",
+        alt: "Anna Arnett Photography",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Anna Arnett Photography",
+    description:
+      "Chicago portrait and editorial photography.",
+    images: ["/photos/converse.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -43,7 +89,22 @@ export default function RootLayout({
     >
       <body>
         <Header />
+
         {children}
+
+        <footer className="site-footer">
+          <span>
+            © {new Date().getFullYear()} Anna Arnett Photography
+          </span>
+
+          <span className="site-footer-location">
+            CHICAGO · SELECT TRAVEL
+          </span>
+
+          <Link href="/privacy">
+            Privacy Policy
+          </Link>
+        </footer>
       </body>
     </html>
   );
