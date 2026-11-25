@@ -586,6 +586,20 @@
 
   color: rgba(247, 241, 231, 0.65);
 }
+
+.privacyNote {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #d9d2c4;
+  margin-top: 0.75rem;
+}
+
+.privacyNote a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
   
   
   /* =========================================================

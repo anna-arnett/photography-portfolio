@@ -429,6 +429,10 @@ export default function InquiryForm() {
           I&apos;ll get back to you as soon as I can to
           chat about your session and availability!
         </p>
+        <p className={styles.privacyNote}>
+            By submitting an inquiry, you acknowledge my{" "}
+            <a href="/privacy">privacy policy</a>.
+        </p>
       </form>
     </>
   );
