@@ -1,3 +1,4 @@
+import { createPageMetadata } from "../../seo";
 import Link from "next/link";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import styles from "./page.module.css";
@@ -52,6 +53,15 @@ const moreFieldNotes = [
   //   ratio: "portrait" as const,
   // },
 ];
+
+export const metadata = createPageMetadata({
+  title: "Chicago Creative & Editorial Photography",
+  description:
+    "Explore experimental portraits, creative photography, movement, light and shadow by Chicago-based editorial photographer Anna Arnett.",
+  path: "/work/creative",
+  image: "/photos/shadow.jpg",
+  imageAlt: "Creative portrait exploring light and shadow",
+});
 
 export default function CreativePage() {
   return (

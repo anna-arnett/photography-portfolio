@@ -1,7 +1,17 @@
+import { createPageMetadata } from "../../seo";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { seniorShoots } from "./shoots";
+
+export const metadata = createPageMetadata({
+  title: "Chicago Senior & Graduation Photographer",
+  description:
+    "Explore natural, nostalgic senior portraits and graduation photography by Anna Arnett. Chicago-based photographer with senior sessions starting at $150.",
+  path: "/work/seniors",
+  image: seniorShoots[0]?.cover ?? "/photos/lydiasenior.JPG",
+  imageAlt: "Outdoor senior portrait by Anna Arnett",
+});
 
 export default function SeniorsPage() {
   return (

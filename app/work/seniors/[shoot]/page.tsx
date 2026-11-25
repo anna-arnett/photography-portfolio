@@ -1,9 +1,38 @@
+import type { Metadata } from "next";
+import { createPageMetadata } from "../../../seo";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SeniorShootCarousel from "./SeniorShootCarousel";
 import styles from "./page.module.css";
 import { seniorShoots } from "../shoots";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ shoot: string }>;
+}): Promise<Metadata> {
+  const { shoot: slug } = await params;
+
+  const shoot = seniorShoots.find(
+    (item) => item.slug === slug
+  );
+
+  if (!shoot) {
+    notFound();
+  }
+
+  return createPageMetadata({
+    title: `${shoot.name} - Senior Portraits in ${shoot.location}`,
+    description:
+      `Explore ${shoot.name}'s senior portrait session in ` +
+      `${shoot.location}, photographed by Anna Arnett ` +
+      `in ${shoot.date}.`,
+    path: `/work/seniors/${shoot.slug}`,
+    image: shoot.cover,
+    imageAlt: `${shoot.name} senior portrait`,
+  });
+}
 
 export function generateStaticParams() {
   return seniorShoots.map((shoot) => ({

@@ -1,7 +1,17 @@
+import { createPageMetadata } from "../../seo";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { portraitShoots } from "./shoots";
+
+export const metadata = createPageMetadata({
+  title: "Chicago Portrait & Headshot Photography",
+  description:
+    "Explore creative portraits and affordable professional headshots by Chicago photographer Anna Arnett. Headshots from $50 and portrait sessions from $100.",
+  path: "/work/portraits",
+  image: portraitShoots[0]?.cover ?? "/photos/marlokate2.JPG",
+  imageAlt: "Portrait photography by Anna Arnett",
+});
 
 export default function PortraitsPage() {
   const portraitSessions = portraitShoots.filter(

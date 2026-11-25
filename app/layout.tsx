@@ -1,3 +1,4 @@
+import { SITE_URL } from "./seo";
 
 import type { Metadata } from "next";
 import {
@@ -28,7 +29,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://annaarnett.photo"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default:
