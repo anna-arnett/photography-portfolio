@@ -512,6 +512,80 @@
   
     color: var(--olive);
   }
+
+  /* =========================================================
+   FORM FUNCTIONALITY
+   ========================================================= */
+
+.formFields {
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  border: 0;
+}
+
+.honeypot {
+  position: absolute;
+
+  left: -10000px;
+
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+}
+
+.form button:disabled {
+  opacity: 0.45;
+
+  cursor: wait;
+}
+
+.form input:disabled,
+.form textarea:disabled,
+.form select:disabled {
+  opacity: 0.65;
+
+  cursor: wait;
+}
+
+.formFeedback {
+  padding: 1rem 1.2rem;
+
+  border: 1px solid var(--light-rule);
+
+  font-family: var(--font-serif), serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.formSuccess {
+  background: rgba(247, 241, 231, 0.08);
+  border-color: rgba(247, 241, 231, 0.4);
+
+  color: var(--cream-light);
+}
+
+.formError {
+  background: rgba(160, 72, 58, 0.14);
+  border-color: rgba(228, 168, 151, 0.55);
+
+  color: #f2c6b7;
+}
+
+.formNote {
+  font-size: 0.75rem;
+  line-height: 1.6;
+
+  color: rgba(247, 241, 231, 0.65);
+}
   
   
   /* =========================================================
